@@ -61,21 +61,21 @@ class WiFiConnection():
         if self.ssid == "empty":
             print(ln+"self.ssid=empty")
             # Тут маємо створити точку доступу, поки що помилка
-            print("Network not found. Reboot...")
-            await asyncio.sleep(5)
-            reset()
+            print("Network not found ")
+            # await asyncio.sleep(5)
+            # reset()
             # raise ValueError("Network not found !!")
             return
-        print("========")
-        print(self.networks)
-        print(self.ssid)
-        print("========")
+        # print("========")
+        
+        # print(self.ssid)
+        # print("========")
         self._pwd = self.networks[self.ssid]
         if trace:
             print("Selected network: {}; pwd: {}; {}dB".format(self.ssid,self._pwd,self.strength))
         self.wlan.connect(self.ssid, self._pwd)
         counter = 10
-        print(ln+"Connecting::",end="")
+        print(ln+"Connecting")
         while not self.wlan.isconnected():
             self.connecting(self,counter)        
             counter = counter - 1

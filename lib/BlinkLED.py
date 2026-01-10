@@ -23,12 +23,10 @@ class BlinkLED:
         if len(self.queue) == _QUEUE_MAXLENGTH:
             print (self.ln+"WARN::Queue is crowded!!! First message deleted!")
         self.queue.append(msg)
-        # print(self.ln+f"Was add message:{msg}. len(queue)={len(self.queue)}.")
+        # print(self.ln+f"Was add message:{msg}. len(queue)={len(self.queue)}."
 
-    async def displayMsg(self, msg=""):
-        
+    async def displayMsg(self, msg=""):        
         self.active=True
-        
         for char in msg:
             if char == ".":
                 onTime =_SHORT

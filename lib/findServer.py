@@ -17,15 +17,12 @@ def findServer(message=b"Hey GridWatcher!",port=5005):
     try:
         data, addr = client.recvfrom(1024)
         data=data.decode()
-        print("Response")
-        print(data)
-        print(addr)
+        print(f"Response: data={data} from {str(addr)}")
         header=data.split(";")[0]#заголовок
         # rpartition повертає кортеж (перед, роздільник, після)
         _, _, port = data.rpartition("=")
         ip=addr[0]
-        if header == "GridWatcher":
-            
+        if header == "GridWatcher":         
             return (ip,port)
     except OSError:  # MicroPython викине OSError при таймауті
         print(ln+"Timeout error")

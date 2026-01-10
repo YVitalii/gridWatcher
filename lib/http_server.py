@@ -5,8 +5,8 @@ class HTTPServer:
     def __init__(self, port=80,trace=False):
         self.port = port
         self.trace=trace
-        if trace:
-            self.ln="[HTTP]::"
+        self.ln="[HTTP]::"
+        self.ready=False
 
     async def _handle_request(self, reader, writer):
         
@@ -18,8 +18,7 @@ class HTTPServer:
             req = request_line.decode('utf-8').strip()
             print(ln + req)
         # Пропускаємо решту заголовків
-        line=await reader.readline()
-        
+        line=await reader.readline()    
         while line != b"\r\n":          
             if self.trace:
                 print(line.decode('utf-8').strip())
@@ -37,9 +36,11 @@ class HTTPServer:
         await writer.wait_closed()
 
     async def start(self):
-        print(f"[HTTP] Server listen port: {self.port}")
+        
         # Запуск асинхронного сервера
         server=await asyncio.start_server(self._handle_request, "0.0.0.0", self.port)
+        # print(f"[HTTP] Server listen on: {self.port}")
+        self.ready=True
         await server.wait_closed()
     
     # must be defined in instance
