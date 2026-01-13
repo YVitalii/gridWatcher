@@ -65,7 +65,7 @@ class WiFiConnection():
             # await asyncio.sleep(5)
             # reset()
             # raise ValueError("Network not found !!")
-            return
+            return None
         # print("========")
         
         # print(self.ssid)
@@ -74,16 +74,16 @@ class WiFiConnection():
         if trace:
             print("Selected network: {}; pwd: {}; {}dB".format(self.ssid,self._pwd,self.strength))
         self.wlan.connect(self.ssid, self._pwd)
-        counter = 10
+        counter = 20
         print(ln+"Connecting")
         while not self.wlan.isconnected():
             self.connecting(self,counter)        
             counter = counter - 1
             if counter == 0:
-                print("Not connected after 10 times.Reboot...")
-                await asyncio.sleep(2)
+                print("Not connected after 10 times.Reboot after 5 minutes...")
+                await asyncio.sleep(5*60)
                 reset()
-            await asyncio.sleep(1)
+            await asyncio.sleep(3)
         self.ip = self.wlan.ipconfig('addr4')[0]
         # print(ln+"self.ip=")
         # print(self.ip)
@@ -94,14 +94,39 @@ class WiFiConnection():
         ln =self.ln+"start()::"
         if trace:
             print(ln+"Started")
+        errCounter=30
         while True:
             if not self.isconnected():
-                print(ln+"Connection lost reconecting.." )
                 self.disconnected(self)
-                await self.connect()
+                print(f"{ln} Try connect N={errCounter}" )
+                await self.connect()               
+                status = self.wlan.status()
+                if status == network.STAT_GOT_IP:
+                    print(f"{ln} status: connection successfull!")
+                elif status ==  network.STAT_IDLE:
+                    errCounter -= 1
+                    print(f"{ln} no connection and no activity")
+                elif status == network.STAT_CONNECTING:
+                    print(f"{ln} status: connecting in progress")
+                elif status == network.STAT_WRONG_PASSWORD:
+                    print(f"{ln} status: failed due to incorrect password")
+                elif status == network.STAT_NO_AP_FOUND:
+                    print(f"{ln} status: failed because no access point replied")
+                    errCounter -= 1
+                elif status == network.STAT_CONNECT_FAIL:
+                    print(f"{ln} status: failed due to other problems")
+                    errCounter -= 1
+                else:
+                    print(f"{ln} status: unknown state {status}")
+                if errCounter<=0 :
+                    print(f"{ln} ERROR: Connection not found 30 times. Reboot.." )
+                    await asyncio.sleep(2)
+                    reset()
+                await asyncio.sleep(10)
+                continue
             if trace :
                 print(ln+"Connection Ok" )
-            await asyncio.sleep(5)
+            await asyncio.sleep(10)
   
     def isconnected(self):
         res=self.wlan.isconnected() and self.wlan.status() == network.STAT_GOT_IP

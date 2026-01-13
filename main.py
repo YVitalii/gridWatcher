@@ -53,7 +53,7 @@ realTimer=RealTime()
 heater = Pin(13, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
 accumulator = Pin(12, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
 heater.value(0)
-accumulator.value(0)
+
 # while True:
 #     heater.value( not heater.value())
 #     accumulator.value( not accumulator.value())
@@ -90,7 +90,11 @@ blink=BlinkLED(2, "State")
 
 # -------   WiFi --------------------
 from WiFi.WiFiConnection import WiFiConnection
-networks={"ogoGarage":"basterbelka2","ogo":"basterbelka2","Bortek2":"71216Garant","bortek_book":"71216Garant","bortek_laser":"71216Garant","bortek_solar":"71216Garant","Bortek_Security":"71216Garant"}
+# networks={"wrongSSID":"wrongPassword"} #test: not found any wifi 
+# networks={"wrongSSID":"wrongPassword","Bortek2":"wrongPassword"} #test: wrong data in wifi 
+# networks={"ogoGarage":"basterbelka2","ogo":"basterbelka2"}
+networks={"Bortek2":"71216Garant","bortek_book":"71216Garant","bortek_laser":"71216Garant","bortek_solar":"71216Garant","Bortek_Security":"71216Garant"}
+
 # Для Raspberry Pi Pico LED на 25 піні, для ESP32 зазвичай на 2
 ledWiFi = Pin(2, Pin.OUT) 
 
@@ -198,7 +202,9 @@ async def main():
             "httpServer":None,
             }
         # print(state)
-        
+        #  ------------ вмикаємо акумулятор тепла, якщо далі не буде якась помилка -----------
+        accumulator.value(1)
+        state["accumulator"] = 1
         # ----------  головний цикл ----------------
         while True:
             await asyncio.sleep(10)
@@ -223,9 +229,9 @@ async def main():
                     state["httpServer"] = f"{connection.ip}:{HTTP_PORT}"
                     print(ln+"Started local http server on:"+state["httpServer"])
                 
-                #  ------------ пошук master =- сервера ----------------
+                #  ------------ пошук master-сервера ----------------
                 if master is None:
-                    # Шукаємо головний (master) сервер
+                    # Шукаємо master-сервер
                     blink.showMsg(MASTER_LOOKING_MSG)
                     master=findServer(message=UDP_REQ,port=UDP_PORT)
                     if not master is None:
@@ -233,21 +239,29 @@ async def main():
                         state["masterServer"] = f"{master[0]}:{master[1]}"
                         print(ln+f"Found master server on: {state['masterServer']}")
                 else:
-                    # Головний (master) сервер готовий
+                    # master-cервер готовий
                     # даємо запит на стан master сервера 
                     res=getServerStatus(master[0],port=master[1],path="/status")
                     if res is None:
                         # Error: timeout
                         blink.showMsg(MASTER_TIMEOUT_MSG)
                         masterErrCounter -=1
+                        print(ln+f"Master timeout error counter = {masterErrCounter}")
                         if masterErrCounter <=0 :
                             raise ValueError(ln+"Master server didn't answer 10 times!!")
-                    # data is received 
-                    masterErrCounter = MASTER_TIMEOUT_COUNTER_MAX
-                    # Запамятовуємо стан мережі
-                    state["offGrid"] = res.get("offGrid")
-                    # Запалюємо/гасимо світлодіод 
-                    blink.pin.value(state["offGrid"])
+                    else:
+                        # data is received 
+                        masterErrCounter = MASTER_TIMEOUT_COUNTER_MAX
+                        # Запамятовуємо стан мережі
+                        try:
+                            state["offGrid"] = res.get("offGrid")
+                            state["accumulator"] = 0 if state["offGrid"] else 1
+                            # Запалюємо/гасимо світлодіод 
+                            blink.pin.value(state["offGrid"])
+                            accumulator.value(state["accumulator"])
+
+                        except Exception as e:
+                            print(ln+f"Непередбачена помилка: {e}") 
 
                 # ----------- визначення реального часу ----------
                 if  realTimer.ready:

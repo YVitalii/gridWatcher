@@ -13,6 +13,8 @@ def findServer(message=b"Hey GridWatcher!",port=5005):
     print(ln+f"Looking for server:[{message}]")
     # Надсилаємо Broadcast на всю мережу
     client.sendto(message, ('192.168.1.255', port))
+    # client.sendto(message, ('255.255.255.255', port))
+
 
     try:
         data, addr = client.recvfrom(1024)

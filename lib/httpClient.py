@@ -4,7 +4,8 @@ import utime
 def getServerStatus(ip, port=3055,path="/",trace=False):
     ln=f"[getServerStatus({path})]:"
     url = f"http://{ip}:{port}{path}"
-    print(ln+f"Request to {url}...")
+    if trace:
+        print(ln+f"Request to {url}...")
     
     try:
         # Робимо запит з таймаутом (щоб не зависнути назавжди)

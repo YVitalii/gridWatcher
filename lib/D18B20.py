@@ -22,7 +22,7 @@ class TemperatureSensor:
 
         if self.ready:
             self.last_temp = []  # Сховище для останнього значення
-            for n in round(0,len(self.roms)):
+            for n in range(0,len(self.roms)):
                 self.last_temp.append(None)
         # print()       
     def findSensors(self):
