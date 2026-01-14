@@ -254,7 +254,7 @@ async def main():
                         masterErrCounter = MASTER_TIMEOUT_COUNTER_MAX
                         # Запамятовуємо стан мережі
                         try:
-                            state["offGrid"] = res.get("offGrid")
+                            state["offGrid"] = int(res.get("offGrid"))
                             state["accumulator"] = 0 if state["offGrid"] else 1
                             # Запалюємо/гасимо світлодіод 
                             blink.pin.value(state["offGrid"])
