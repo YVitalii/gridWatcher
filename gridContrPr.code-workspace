@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "serial:/COM8",
+			"uri": "serial://com8/"
+		}
+	],
+	"settings": {}
+}

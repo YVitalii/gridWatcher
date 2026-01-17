@@ -1,3 +1,5 @@
+DEVELOPMENT=const(0)
+
 from machine import Pin
 import machine
 import time
@@ -6,9 +8,11 @@ import uasyncio as asyncio
 from http_server import HTTPServer
 from findServer import findServer
 from httpClient import getServerStatus
-from genFunc import toSeconds
 import ujson
+# from microdot import Microdot
 
+import ramInfo
+import flashInfo
 
 # повідомлення про стан
 WIFI_CONNECTING = const ("-. ")
@@ -23,6 +27,24 @@ UDP_PORT=5005
 STATE_TIMER=10 # ceк, Період між опитуваннями стану сервера
 HTTP_PORT=3055
 ln="[main.py]:"
+
+# --- всі параметри стану зведені в цей словник --------
+state ={
+    "offGrid":None,
+    "T0":None,
+    "T1":None,
+    "time":None,
+    "weekDay":None,
+    "date":None,
+    "heater":None,
+    "accumulator":None,
+    "taskT":None,
+    "taskMode":None,
+    "masterServer":None,
+    "httpServer":None,
+    }
+if DEVELOPMENT: 
+    print(state)
 
 
 def stop():
@@ -126,19 +148,14 @@ def mainRouter(request):
     print(request)
     # Проста маршрутизація
     if "GET /status" in request:
-        state=manager.state
-        data = {
-            "weekday": state[0],
-            "clockStr": state[1],
-            "taskT": state[2],
-            "currT": state[3],
-            "heater": state[4],
-            "accumulator": state[5]
-            }
-        body = ujson.dumps(data)
+        body = ujson.dumps(state)
         content_type = "application/json"
     
     elif "GET /start" in request:
+        body = '{"command": "start", "result": "success"}'
+        content_type = "application/json"
+    
+    elif "POST /set" in request:
         body = '{"command": "start", "result": "success"}'
         content_type = "application/json"
     
@@ -185,23 +202,7 @@ async def main():
         
         # --- стартові налаштування  http серверу
         http=None
-        
-        # --- всі параметри стану зведені в цей словник --------
-        state ={
-            "offGrid":None,
-            "T0":None,
-            "T1":None,
-            "time":None,
-            "weekDay":None,
-            "date":None,
-            "heater":None,
-            "accumulator":None,
-            "taskT":None,
-            "taskMode":None,
-            "masterServer":None,
-            "httpServer":None,
-            }
-        # print(state)
+                
         #  ------------ вмикаємо акумулятор тепла, якщо далі не буде якась помилка -----------
         accumulator.value(1)
         state["accumulator"] = 1
@@ -271,62 +272,13 @@ async def main():
                 else:
                     # ----------- запускаємо задачу визначення реального часу
                     realTimerTask=asyncio.create_task(realTimer.start())
-            print(state)
-
-
-
-        
-        
-      
-
-        
-        
-        
-        
-        
-        
-        
-        # -----------------запит стану сервера
-        while True:
-            res=getServerStatus(master[0],port=master[1],path="/status")
-            print(ln+"Server status=",end="")
-            print(res)
-            if res is None :
-                errCounter=errCounter-1
-                if (errCounter<=0):
-                    print(ln+"Server not answered 10 times. Reboot...")
-                    machine.reset() 
-                await asyncio.sleep(STATE_TIMER)
-                continue
-            # reset counter
-            errCounter=10
-
-            # стан мережі
-            offGrid= int(res.get("offGrid"))
-            # print(ln + "offGrid="+str(offGrid))
-
-            # день тижня  0 = понеділок
-            weekday = int(res.get("weekday")[1])
-            # print(ln + "res.get('weekday')="+str(res.get("weekday")))
-            # print(ln + "weekday="+str(weekday))
-            
-            # # кількість секунд від початку доби 
-            # clock = res.get("time")
-           
-            
-            # індикація
-            ledWiFi.value(offGrid)
-            
-            # считуємо температуру
-          
-            # обробляємо графік
-            state = manager.test(offGrid,currT,clockStr=res.get("time"),weekday=weekday)
-            # print(state)
-
-            await asyncio.sleep(STATE_TIMER)
-
-        
-        
+            t0=state["T0"]
+            if (not t0 is None):
+                if t0 <= 5:
+                    state["accumulator"] = 1
+            if DEVELOPMENT:
+                ramInfo.getInfo()
+            # print(state)      
        
     except Exception as e:
         # Сюди потраплять помилки з будь-якої задачі в gather
@@ -334,7 +286,8 @@ async def main():
         print(e)
         # Даємо трохи часу, щоб повідомлення встигло вийти в термінал
         time.sleep(2)
-        
+        print ("Current state:")
+        print(state)
         print(ln+"Reboot...")
         machine.reset() # Фізичне перезавантаження контролера
 try:

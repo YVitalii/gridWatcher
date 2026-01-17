@@ -12,6 +12,9 @@ class WiFiConnection():
         if trace:
             ln=self.ln+" __init__"    
         self.wlan = network.WLAN(network.WLAN.IF_STA) 
+        if self.wlan.active():
+            self.wlan.active(False)
+            time.sleep(1)
         self.wlan.active(True)  
         self.ssid = "empty"
         self._pwd = "empty"
