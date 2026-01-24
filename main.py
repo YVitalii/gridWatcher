@@ -15,9 +15,7 @@ import ramInfo
 import flashInfo
 
 # повідомлення про стан
-WIFI_CONNECTING = const ("-. ")
-WIFI_DISCONNECTED = const ("-... ")
-WIFI_CONNECTED = const ("-.... ")
+
 MASTER_LOOKING_MSG = const("..-- ")
 MASTER_TIMEOUT_MSG = const("..--- ")
 MASTER_TIMEOUT_COUNTER_MAX=const(10)
@@ -38,7 +36,7 @@ state ={
     "date":None,
     "heater":None,
     "accumulator":None,
-    "taskT":None,
+    "taskT":{"min":6, "middle":15, "max":20},
     "taskMode":None,
     "masterServer":None,
     "httpServer":None,
@@ -56,6 +54,10 @@ async def aStop(msg="."):
     while True:
         await asyncio.sleep(5)
         print (msg)
+
+# ---- test WiFi ----
+# import WiFi.WiFi_test as testWiFi
+# stop()
 
 # ------------- DS18B20 -------------
 from D18B20 import TemperatureSensor
@@ -75,11 +77,17 @@ realTimer=RealTime()
 heater = Pin(13, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
 accumulator = Pin(12, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
 heater.value(0)
+accumulator.value(0)
 
 # while True:
 #     heater.value( not heater.value())
 #     accumulator.value( not accumulator.value())
 #     time.sleep(1)
+
+#  ------------ GridIndicator --------------
+from GridIndicator import GridIndicator
+gridLed = GridIndicator(Pin(14, Pin.OUT, drive=Pin.DRIVE_1),state) # 10mA R=60 Ohm
+blinkTask=asyncio.create_task(gridLed.start()) 
 
 # ------------ manager ---------------
 from Manager import Manager
@@ -118,28 +126,8 @@ from WiFi.WiFiConnection import WiFiConnection
 networks={"Bortek2":"71216Garant","bortek_book":"71216Garant","bortek_laser":"71216Garant","bortek_solar":"71216Garant","Bortek_Security":"71216Garant"}
 
 # Для Raspberry Pi Pico LED на 25 піні, для ESP32 зазвичай на 2
-ledWiFi = Pin(2, Pin.OUT) 
-
-connection = WiFiConnection(networks,True)
-
-def wiFiConnecting(self,counter):
-    blink.showMsg(WIFI_CONNECTING)
-    # print(".",end="")
-
-def wiFiConnected(self):
-    blink.showMsg(WIFI_CONNECTED)
-    print(self.ln+f"Connected to: [{self.ssid}], my IP: {self.ip}")
-
-def wiFiDisconnected(self):
-    blink.showMsg(WIFI_DISCONNECTED)
-    print(self.ln+"Disconnected from:"+self.ssid)
-
-connection.connecting =  wiFiConnecting
-connection.connected =  wiFiConnected 
-connection.disconnected =  wiFiDisconnected
-
-
-
+# wifi_led = BlinkLED(2, "WiFi")
+connection = WiFiConnection(networks,BlinkLED(2, "WiFi"),True)
 
 
 # ----- http router ---------
@@ -180,11 +168,7 @@ manager = Manager(heater,accumulator, dT=1,minT=6,lowT=10,normT=15,highT=18)
 
 # -------  main  -------
 async def main():
-    try:
-        
-        # запуск менеджера повідомлень (блимає вбудованим світлодіодом)
-        #  повинен бути спочатку щоб працювала індикація
-        blinkTask=asyncio.create_task(blink.start())   
+    try: 
 
         # запуск WiFi
         connectionTask=asyncio.create_task(connection.start(trace=False))
@@ -195,7 +179,6 @@ async def main():
         # ----- start temperature reader -------
         temperatureTask= asyncio.create_task(temperatureSensor.start())
        
-
         # --- стартові налаштування майстер-серверу
         master = None 
         masterErrCounter = MASTER_TIMEOUT_COUNTER_MAX 
@@ -204,8 +187,9 @@ async def main():
         http=None
                 
         #  ------------ вмикаємо акумулятор тепла, якщо далі не буде якась помилка -----------
-        accumulator.value(1)
-        state["accumulator"] = 1
+        accumulator.value(0)
+        state["accumulator"] = 0
+
         # ----------  головний цикл ----------------
         while True:
             await asyncio.sleep(10)
@@ -245,7 +229,7 @@ async def main():
                     res=getServerStatus(master[0],port=master[1],path="/status")
                     if res is None:
                         # Error: timeout
-                        blink.showMsg(MASTER_TIMEOUT_MSG)
+                        # blink.showMsg(MASTER_TIMEOUT_MSG)
                         masterErrCounter -=1
                         print(ln+f"Master timeout error counter = {masterErrCounter}")
                         if masterErrCounter <=0 :
@@ -258,7 +242,7 @@ async def main():
                             state["offGrid"] = int(res.get("offGrid"))
                             state["accumulator"] = 0 if state["offGrid"] else 1
                             # Запалюємо/гасимо світлодіод 
-                            blink.pin.value(state["offGrid"])
+                            # blink.pin.value(state["offGrid"])
                             accumulator.value(state["accumulator"])
 
                         except Exception as e:
@@ -274,8 +258,14 @@ async def main():
                     realTimerTask=asyncio.create_task(realTimer.start())
             t0=state["T0"]
             if (not t0 is None):
-                if t0 <= 5:
+                if t0 <= state["taskT"]["min"]:
                     state["accumulator"] = 1
+                    accumulator.value(1)
+                    print("[main.py]: Accumulator ON, T0 low")
+                elif t0 >= state["taskT"]["max"]:
+                    state["accumulator"] = 0
+                    accumulator.value(0)
+                    print("[main.py]: Accumulator OFF, T0 high")
             if DEVELOPMENT:
                 ramInfo.getInfo()
             # print(state)      

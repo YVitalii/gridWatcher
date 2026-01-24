@@ -7,6 +7,7 @@ _PERIOD = const(500) # ms
 _SHORT=const(50)# ms
 _LONG=const(5*70)# ms 
 _QUEUE_MAXLENGTH = 5
+
 class BlinkLED:
     def __init__(self, pin_id, name="LED"):
         # Налаштовуємо пін з підтяжкою до живлення
@@ -15,6 +16,7 @@ class BlinkLED:
         self.ln=name+":"
         self.active = False
         self.queue = deque((), _QUEUE_MAXLENGTH)
+        self.task = asyncio.create_task(self.start())
 
     # msg= "..- " = 2 short(point) → 1 _LONG(dash) → paus(space)) 
     def showMsg(self, msg=None):
@@ -24,6 +26,13 @@ class BlinkLED:
             print (self.ln+"WARN::Queue is crowded!!! First message deleted!")
         self.queue.append(msg)
         # print(self.ln+f"Was add message:{msg}. len(queue)={len(self.queue)}."
+    
+    def value(self,val=None):
+        if val is None:
+            return self.pin.value()
+        if val != self.pin.value():
+            self.showMsg("1" if val else "0")
+        
 
     async def displayMsg(self, msg=""):        
         self.active=True
@@ -34,6 +43,12 @@ class BlinkLED:
                 onTime = _LONG
             elif char == " ":
                 onTime=0
+            elif char == "1":
+                self.pin.value(1)
+                continue
+            elif char == "0":
+                self.pin.value(0)
+                continue
             else:
                  continue  
             # print(self.ln+f"[{char}] = [{onTime}]")
