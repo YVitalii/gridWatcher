@@ -1,5 +1,7 @@
-DEVELOPMENT=const(0)
-
+DEVELOPMENT=const(1)# Встановити в 1 для режиму розробки, 0 - для робочого режиму
+# WiFi  мережі
+networks={"ogoGarage":"basterbelka2","ogo":"basterbelka2","Bortek2":"71216Garant","bortek_book":"71216Garant","bortek_laser":"71216Garant","bortek_solar":"71216Garant","Bortek_Security":"71216Garant"}
+# networks={"ogoGarage":"basterbelka2","ogo":"basterbelka2"}
 from machine import Pin
 import machine
 import time
@@ -35,14 +37,19 @@ state ={
     "weekDay":None,
     "date":None,
     "heater":None,
-    "accumulator":None,
+    "heater":None,
     "taskT":{"min":6, "middle":15, "max":20},
     "taskMode":None,
     "masterServer":None,
     "httpServer":None,
     }
 if DEVELOPMENT: 
+    print("state=",end="")
     print(state)
+
+
+
+
 
 
 def stop():
@@ -54,6 +61,11 @@ async def aStop(msg="."):
     while True:
         await asyncio.sleep(5)
         print (msg)
+
+# from requestToDict import parseRequest 
+# dict=parseRequest("GET /set?taskT={min:10,middle:20,max:30}&taskTmax=30&taskTmid=20 HTTP/1.1")
+# print(dict)
+# stop()
 
 # ---- test WiFi ----
 # import WiFi.WiFi_test as testWiFi
@@ -74,33 +86,31 @@ from realTime import RealTime
 realTimer=RealTime()
 
 #  ------------- OUTs ------------
-heater = Pin(13, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
-accumulator = Pin(12, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
+
+heater = Pin(12, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
 heater.value(0)
-accumulator.value(0)
 
 # while True:
 #     heater.value( not heater.value())
-#     accumulator.value( not accumulator.value())
+#     heater.value( not heater.value())
 #     time.sleep(1)
 
 #  ------------ GridIndicator --------------
 from GridIndicator import GridIndicator
-gridLed = GridIndicator(Pin(14, Pin.OUT, drive=Pin.DRIVE_1),state) # 10mA R=60 Ohm
-blinkTask=asyncio.create_task(gridLed.start()) 
+gridLed = GridIndicator(Pin(13, Pin.OUT, drive=Pin.DRIVE_1),state) # 10mA R=60 Ohm
+gridLedTask=asyncio.create_task(gridLed.start()) 
 
-# ------------ manager ---------------
-from Manager import Manager
-manager=Manager(
-    heater,
-    accumulator,
-    dT=1,
-    minT=6,
-    lowT=10,
-    normT=15,
-    highT=18,
-    trace=True
-    )
+# # ------------ manager ---------------
+# from Manager import Manager
+# manager=Manager(
+#     heater,
+#     dT=1,
+#     minT=6,
+#     lowT=10,
+#     normT=15,
+#     highT=18,
+#     trace=True
+#     )
 
 
 
@@ -122,8 +132,8 @@ blink=BlinkLED(2, "State")
 from WiFi.WiFiConnection import WiFiConnection
 # networks={"wrongSSID":"wrongPassword"} #test: not found any wifi 
 # networks={"wrongSSID":"wrongPassword","Bortek2":"wrongPassword"} #test: wrong data in wifi 
-# networks={"ogoGarage":"basterbelka2","ogo":"basterbelka2"}
-networks={"Bortek2":"71216Garant","bortek_book":"71216Garant","bortek_laser":"71216Garant","bortek_solar":"71216Garant","Bortek_Security":"71216Garant"}
+
+
 
 # Для Raspberry Pi Pico LED на 25 піні, для ESP32 зазвичай на 2
 # wifi_led = BlinkLED(2, "WiFi")
@@ -132,8 +142,10 @@ connection = WiFiConnection(networks,BlinkLED(2, "WiFi"),True)
 
 # ----- http router ---------
 def mainRouter(request):
-    print(ln+"MainRouter: req=")
-    print(request)
+    trace=True
+    if trace:
+        print(ln+"MainRouter: req=")
+        print(request)
     # Проста маршрутизація
     if "GET /status" in request:
         body = ujson.dumps(state)
@@ -142,11 +154,10 @@ def mainRouter(request):
     elif "GET /start" in request:
         body = '{"command": "start", "result": "success"}'
         content_type = "application/json"
-    
+
     elif "POST /set" in request:
         body = '{"command": "start", "result": "success"}'
-        content_type = "application/json"
-    
+        content_type = "application/json" 
     else:
         body = "<h1>MicroPython Server</h1><p>Use /status or /start</p>"
         content_type = "text/html"
@@ -157,12 +168,13 @@ def mainRouter(request):
         "Connection: close\r\n\r\n"
         + body
     ) 
+
 # ---- збиральник сміття
 import gcCollector
 
 # ---- графік роботи ---
-from Manager import Manager
-manager = Manager(heater,accumulator, dT=1,minT=6,lowT=10,normT=15,highT=18)
+# from Manager import Manager
+# manager = Manager(heater,heater, dT=1,minT=6,lowT=10,normT=15,highT=18)
 
 
 
@@ -187,13 +199,13 @@ async def main():
         http=None
                 
         #  ------------ вмикаємо акумулятор тепла, якщо далі не буде якась помилка -----------
-        accumulator.value(0)
-        state["accumulator"] = 0
+        heater.value(0)
+        state["heater"] = 0
 
         # ----------  головний цикл ----------------
         while True:
-            await asyncio.sleep(10)
-
+            await asyncio.sleep(20)
+            ln = f"[main.py]:{state['time']}::"
             if temperatureSensor.ready:
                 state["T0"]= temperatureSensor.getT(0)
                 state["T1"]= temperatureSensor.getT(1)
@@ -204,7 +216,7 @@ async def main():
             # виконується тільки якщо є WiFi 
             if connection.isconnected():           
                 # connection established
-
+                
                 # -------------- http server ------------
                 if http is None:
                     # Запускаємо власний http сервер
@@ -217,7 +229,7 @@ async def main():
                 #  ------------ пошук master-сервера ----------------
                 if master is None:
                     # Шукаємо master-сервер
-                    blink.showMsg(MASTER_LOOKING_MSG)
+                    # blink.showMsg(MASTER_LOOKING_MSG)
                     master=findServer(message=UDP_REQ,port=UDP_PORT)
                     if not master is None:
                         # Знайдено головний (master) сервер
@@ -240,10 +252,10 @@ async def main():
                         # Запамятовуємо стан мережі
                         try:
                             state["offGrid"] = int(res.get("offGrid"))
-                            state["accumulator"] = 0 if state["offGrid"] else 1
+                            state["heater"] = 0 if (state["offGrid"] is None or state["offGrid"]==1) else 1
                             # Запалюємо/гасимо світлодіод 
                             # blink.pin.value(state["offGrid"])
-                            accumulator.value(state["accumulator"])
+                            heater.value(state["heater"])
 
                         except Exception as e:
                             print(ln+f"Непередбачена помилка: {e}") 
@@ -259,13 +271,13 @@ async def main():
             t0=state["T0"]
             if (not t0 is None):
                 if t0 <= state["taskT"]["min"]:
-                    state["accumulator"] = 1
-                    accumulator.value(1)
-                    print("[main.py]: Accumulator ON, T0 low")
+                    state["heater"] = 1
+                    heater.value(1)
+                    print(ln+f'[main.py]: heater ON, T0={t0} <= {state["taskT"]["min"]}=taskTmin')
                 elif t0 >= state["taskT"]["max"]:
-                    state["accumulator"] = 0
-                    accumulator.value(0)
-                    print("[main.py]: Accumulator OFF, T0 high")
+                    state["heater"] = 0
+                    heater.value(0)
+                    print(ln+f'[main.py]: heater OFF, T0={t0} >= {state["taskT"]["max"]}=taskTmax')
             if DEVELOPMENT:
                 ramInfo.getInfo()
             # print(state)      
