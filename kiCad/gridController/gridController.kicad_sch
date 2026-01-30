@@ -1047,6 +1047,189 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "B_EL_General:Кнопка_NO"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SB"
+				(at 11.684 4.064 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+						(thickness 0.381)
+						(bold yes)
+						(italic yes)
+					)
+				)
+			)
+			(property "Value" "Кнопка S2PR-P1K, чорна, д22"
+				(at 7.62 9.398 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Опис"
+				(at 12.446 -3.302 0)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+						(italic yes)
+					)
+				)
+			)
+			(property "ЛП" "1"
+				(at -1.524 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Контактів" "2"
+				(at 11.176 14.224 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Постачальник" "Придбати"
+				(at 3.81 14.478 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Примітка" "Кнопка без фіксації"
+				(at 6.604 12.192 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Кнопка_NO_0_1"
+				(circle
+					(center 3.175 0)
+					(radius 0.635)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.905) (xy 5.715 3.175)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.905) (xy 3.175 1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 8.255 0)
+					(radius 0.635)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Кнопка_NO_1_1"
+				(pin passive line
+					(at 0 0 0)
+					(length 3.81)
+					(name "1"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 11.43 0 180)
+					(length 3.81)
+					(name "2"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "B_Electronics:LED"
 			(pin_numbers
 				(hide yes)
@@ -1312,6 +1495,228 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "B_Electronics:T_Buzzer_Active"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BZ"
+				(at 4.826 3.048 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Buzzer"
+				(at 5.334 -7.874 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ЛП" "0"
+				(at 4.826 5.334 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Постачальник" "Придбати"
+				(at 1.27 11.684 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Контактів" "3"
+				(at -4.064 10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Примітка" "Звуковий сигнал"
+				(at 0.508 7.366 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Склад" "Модуль з динаміком активний, HighLevel"
+				(at 6.096 8.382 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "T_Buzzer_Active_0_1"
+				(rectangle
+					(start 2.54 1.27)
+					(end 7.62 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -1.27) (xy 8.89 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -3.81) (xy 8.89 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 10.795 -5.08)
+					(mid 8.2229 -2.54)
+					(end 10.795 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 10.795 -5.08) (xy 10.795 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "T_Buzzer_Active_1_1"
+				(text "Z"
+					(at 9.906 -2.54 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 0 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -2.54 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2068,6 +2473,256 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+3V3"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3V3_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -2169,10 +2824,500 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "БЖ_AC-DC_1"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "PS"
+				(at 9.398 4.064 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+						(thickness 0.508)
+						(bold yes)
+						(italic yes)
+					)
+				)
+			)
+			(property "Value" "220АС→?VDC;?A"
+				(at 10.16 -11.43 0)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+						(italic yes)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 10.414 -11.43 0)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Постачальник" "Придбати"
+				(at 20.828 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ЛП" "0"
+				(at 3.302 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Контактів" "4"
+				(at 10.668 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Примітка" "Блок живлення "
+				(at 7.62 11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Склад" "Блок живлення 220АС-24VDC-20W"
+				(at 7.112 14.224 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "БЖ_AC-DC_1_0_1"
+				(polyline
+					(pts
+						(xy 7.62 -5.715) (xy 7.62 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -1.905) (xy 3.81 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -5.715) (xy 3.81 -5.715)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 16.51 -9.525)
+					(end 3.81 1.905)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "БЖ_AC-DC_1_1_1"
+				(pin power_in line
+					(at 0 0 0)
+					(length 3.81)
+					(name "L"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -3.81 0)
+					(length 3.81)
+					(name "N"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 0 180)
+					(length 3.81)
+					(name "+VDC"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 -3.81 180)
+					(length 3.81)
+					(name "0VDC"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "БЖ_AC-DC_2"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "PS"
+				(at 9.398 4.064 0)
+				(effects
+					(font
+						(size 2.54 2.54)
+						(thickness 0.508)
+						(bold yes)
+						(italic yes)
+					)
+				)
+			)
+			(property "Value" "220АС→?VDC;?A"
+				(at 10.16 -11.43 0)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(thickness 0.381)
+						(bold yes)
+						(italic yes)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 10.414 -11.43 0)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Постачальник" "Придбати"
+				(at 20.828 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ЛП" "0"
+				(at 3.302 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Контактів" "4"
+				(at 10.668 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Примітка" "Блок живлення "
+				(at 7.62 11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Склад" "Блок живлення 220АС-24VDC-20W"
+				(at 7.112 14.224 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "БЖ_AC-DC_2_0_1"
+				(polyline
+					(pts
+						(xy 7.62 -5.715) (xy 7.62 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -1.905) (xy 3.81 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 16.51 -5.715) (xy 3.81 -5.715)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 16.51 -9.525)
+					(end 3.81 1.905)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "БЖ_AC-DC_2_1_1"
+				(pin power_in line
+					(at 0 0 0)
+					(length 3.81)
+					(name "L"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -3.81 0)
+					(length 3.81)
+					(name "N"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 0 180)
+					(length 3.81)
+					(name "+VDC"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 -3.81 180)
+					(length 3.81)
+					(name "0VDC"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.905 1.905)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "T0\n(опція)"
 		(exclude_from_sim no)
-		(at 55.626 48.26 0)
+		(at 65.786 54.61 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -2183,9 +3328,30 @@
 		)
 		(uuid "341c4d18-6e2a-4b6b-8f67-3e9f0ab46a21")
 	)
+	(text "Smart Load"
+		(exclude_from_sim no)
+		(at 54.356 131.826 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "5bcb639e-2dff-42fc-8b8d-e0a8bfd12b90")
+	)
+	(text "Notes:\nD12 - Must be high during boot.\nD15 - Prevents startup log \nD2 - floating or low for flashing (internal LED)"
+		(exclude_from_sim no)
+		(at 155.448 25.654 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "5e938df9-2da9-4aed-9df3-aefc7d7f1b81")
+	)
 	(text "T1\n(опція)"
 		(exclude_from_sim no)
-		(at 55.118 64.516 0)
+		(at 65.278 70.866 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -2196,81 +3362,234 @@
 		)
 		(uuid "b3d251cf-5b62-4827-9b47-23bd2a12ca86")
 	)
+	(text "Notes:\nD5, D18 - PULL_UP\nD19, D21 - PULL_DOWN\n"
+		(exclude_from_sim no)
+		(at 129.286 114.046 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+			)
+			(justify left)
+		)
+		(uuid "d17d2f43-88c0-4137-89f0-a66f4e364ee3")
+	)
+	(text "Grid Sensor"
+		(exclude_from_sim no)
+		(at 54.356 103.886 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+		)
+		(uuid "f7013b3e-1f71-4c66-8c07-e465569c8dc7")
+	)
 	(junction
-		(at 139.7 49.53)
+		(at 163.83 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "166152f1-5767-4210-89e8-1d96975ec214")
 	)
 	(junction
-		(at 92.71 45.72)
+		(at 104.14 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "194fde37-681c-4e03-8c56-7cf6496d750b")
 	)
 	(junction
-		(at 78.74 45.72)
+		(at 180.34 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e6274b2-d9e2-4de0-ab74-04ed06791ade")
+	)
+	(junction
+		(at 88.9 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "25cb6357-2333-4fd4-9d44-0db67609f2de")
 	)
 	(junction
-		(at 99.06 45.72)
+		(at 69.85 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3eb17730-bd3a-4255-9094-4fb8fdd83232")
+	)
+	(junction
+		(at 123.19 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "45c58df1-efeb-42fe-959e-a6683a45e4c9")
 	)
 	(junction
-		(at 92.71 54.61)
+		(at 104.14 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "49170308-6748-49d7-a8d9-9a4246ed4b24")
 	)
 	(junction
-		(at 81.28 50.8)
+		(at 187.96 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4d76eeca-7cc8-4af8-bf57-51bd488044dd")
+	)
+	(junction
+		(at 69.85 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e99837e-5d52-4a6b-ab4c-353030c2166b")
+	)
+	(junction
+		(at 91.44 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56423143-3e1a-43f0-aaed-1eced5dd44df")
+	)
+	(junction
+		(at 69.85 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5904215c-7954-4454-b23c-16f46b2cc761")
+	)
+	(junction
+		(at 69.85 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5dce3673-491e-486f-b98f-e2ca4d4c0d20")
+	)
+	(junction
+		(at 91.44 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "69c02b99-dfad-403f-9da4-9fec606e84ce")
 	)
 	(junction
-		(at 158.75 41.91)
+		(at 187.96 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6a7e1db6-7560-43fb-951d-bd0c6994bce9")
+	)
+	(junction
+		(at 189.23 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "73dfba9e-821a-4f83-a89a-9ce526563233")
 	)
 	(junction
-		(at 90.17 43.18)
+		(at 96.52 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "842c2169-0d38-4db5-ac30-af25cee6013b")
+	)
+	(junction
+		(at 86.36 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "93fdf005-e8ae-44de-ac18-b1c18d8d9e39")
+	)
+	(junction
+		(at 193.04 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96c610be-8b47-4b71-815e-2a4a25f805ad")
+	)
+	(junction
+		(at 69.85 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a03ccf45-f441-45f9-8653-b856561bbbb9")
+	)
+	(junction
+		(at 80.01 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a150c6f9-c897-4373-a0ea-ec99dc154d95")
+	)
+	(junction
+		(at 86.36 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5197da0-af34-4d9e-ba23-8c6140969d57")
+	)
+	(junction
+		(at 173.99 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8f4986a-e48a-40c6-8729-68fbd115a165")
+	)
+	(junction
+		(at 69.85 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b63e0649-45a2-464d-b1c8-b51fa8c9eae6")
+	)
+	(junction
+		(at 190.5 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b71e5103-4c26-429a-8102-6b883dfa4ac6")
+	)
+	(junction
+		(at 115.57 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7854feb-ca19-438d-ba4d-d8f7026447dd")
+	)
+	(junction
+		(at 80.01 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc1135fc-91f0-4bcd-a480-b17feb91889f")
+	)
+	(junction
+		(at 96.52 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c08edf2f-fe1e-4362-b8e2-a1e1030774bb")
+	)
+	(junction
+		(at 101.6 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c5f72369-3652-47dc-8df6-6458ecc93f0f")
 	)
 	(junction
-		(at 83.82 54.61)
+		(at 95.25 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d20d707b-9444-4838-985d-43e56196ce17")
+	)
+	(junction
+		(at 93.98 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0156676-1083-49a1-9e98-d621488b779d")
 	)
 	(junction
-		(at 158.75 45.72)
+		(at 80.01 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e4af1899-80a5-4ad7-8e39-3742b5f6871d")
+		(uuid "e59834db-778a-4958-92c3-0c43bf89da42")
 	)
 	(junction
-		(at 148.59 45.72)
+		(at 69.85 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e71e27c8-0f79-4c05-bd11-c727d37b53c7")
+	)
+	(junction
+		(at 80.01 132.08)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e7791df4-ec4c-4337-93c3-fee91b59727d")
+	)
+	(junction
+		(at 172.72 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e84527c2-0504-4e2d-9559-ca9349324834")
 	)
-	(junction
-		(at 154.94 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f514c0ac-768f-42d6-aa18-3a06ce4a5fbd")
-	)
 	(wire
 		(pts
-			(xy 148.59 45.72) (xy 158.75 45.72)
+			(xy 172.72 52.07) (xy 180.34 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2280,7 +3599,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 49.53) (xy 101.6 49.53)
+			(xy 110.49 55.88) (xy 115.57 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2290,7 +3609,17 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 45.72) (xy 78.74 45.72)
+			(xy 86.36 118.11) (xy 86.36 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09f57c20-b3f2-4707-9716-32347d3f94ba")
+	)
+	(wire
+		(pts
+			(xy 86.36 52.07) (xy 88.9 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2300,7 +3629,17 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 43.18) (xy 96.52 43.18)
+			(xy 125.73 82.55) (xy 113.03 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d0e47e0-9f32-45fd-a740-65fe4abce8b5")
+	)
+	(wire
+		(pts
+			(xy 101.6 49.53) (xy 110.49 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2310,17 +3649,37 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 57.15) (xy 149.86 67.31)
+			(xy 80.01 132.08) (xy 69.85 132.08)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
+		(uuid "11029d23-8445-43d4-b16e-a6cabfb76974")
+	)
+	(wire
+		(pts
+			(xy 190.5 73.66) (xy 190.5 74.93)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
 		(uuid "136387f8-0e9f-4a70-919c-809f6954ead0")
 	)
 	(wire
 		(pts
-			(xy 181.61 45.72) (xy 195.58 45.72)
+			(xy 95.25 52.07) (xy 91.44 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1384c855-1326-4d94-addd-963eb5ee5e34")
+	)
+	(wire
+		(pts
+			(xy 212.09 52.07) (xy 226.06 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2330,7 +3689,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 45.72) (xy 99.06 45.72)
+			(xy 125.73 52.07) (xy 123.19 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2340,7 +3699,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 41.91) (xy 195.58 41.91)
+			(xy 212.09 48.26) (xy 226.06 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2350,17 +3709,27 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 49.53) (xy 154.94 59.69)
+			(xy 86.36 109.22) (xy 96.52 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1e4d7c80-e5d8-4090-94b7-019ec7cff369")
+		(uuid "1ca40d10-4be2-484c-b6d2-be76ee4f3a7c")
 	)
 	(wire
 		(pts
-			(xy 92.71 54.61) (xy 83.82 54.61)
+			(xy 69.85 120.65) (xy 69.85 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1df95896-db04-42ca-b4c9-8713bd8da7df")
+	)
+	(wire
+		(pts
+			(xy 93.98 67.31) (xy 104.14 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2370,17 +3739,47 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 60.96) (xy 146.05 60.96)
+			(xy 91.44 77.47) (xy 91.44 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "29fede78-a2b7-4211-b7a7-bbaabe9f9d10")
+		(uuid "22d5ab0f-2cc7-4aaa-bafb-45bfc4df1520")
 	)
 	(wire
 		(pts
-			(xy 191.77 63.5) (xy 195.58 63.5)
+			(xy 168.91 90.17) (xy 191.77 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24b03bd1-ebba-42df-90cd-506e9638b35b")
+	)
+	(wire
+		(pts
+			(xy 80.01 116.84) (xy 86.36 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28800d8a-f3bb-4383-8c34-4ab9932d018f")
+	)
+	(wire
+		(pts
+			(xy 95.25 77.47) (xy 91.44 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "296e27c7-9ec3-4c9d-85d3-6be09249b9e7")
+	)
+	(wire
+		(pts
+			(xy 223.52 69.85) (xy 227.33 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2390,7 +3789,37 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 55.88) (xy 158.75 45.72)
+			(xy 80.01 135.89) (xy 80.01 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b6dd333-195e-4009-bcbf-133bfa5148f0")
+	)
+	(wire
+		(pts
+			(xy 95.25 45.72) (xy 95.25 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d1d99a2-d18b-4e7f-a04a-a675501d0186")
+	)
+	(wire
+		(pts
+			(xy 96.52 93.98) (xy 110.49 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f03224c-cd46-4f58-aafd-4c563db0adfa")
+	)
+	(wire
+		(pts
+			(xy 190.5 63.5) (xy 190.5 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2400,7 +3829,37 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 45.72) (xy 81.28 50.8)
+			(xy 172.72 60.96) (xy 175.26 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3101f615-5122-4e64-82a6-bf4972aade89")
+	)
+	(wire
+		(pts
+			(xy 69.85 85.09) (xy 69.85 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3163a3b8-8c94-460b-8603-5d63f852a97a")
+	)
+	(wire
+		(pts
+			(xy 113.03 82.55) (xy 113.03 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "323170ee-9237-4f62-9cdd-3d48d62aa035")
+	)
+	(wire
+		(pts
+			(xy 91.44 52.07) (xy 91.44 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2410,7 +3869,37 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 59.69) (xy 154.94 59.69)
+			(xy 69.85 132.08) (xy 69.85 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3537d314-b931-4050-829c-80e1e30725e3")
+	)
+	(wire
+		(pts
+			(xy 186.69 60.96) (xy 187.96 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b06b057-bc59-4ec0-8ad2-62c8153e25f1")
+	)
+	(wire
+		(pts
+			(xy 172.72 59.69) (xy 172.72 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "421919d8-651a-4f5f-9158-4c4f18796433")
+	)
+	(wire
+		(pts
+			(xy 194.31 67.31) (xy 187.96 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2420,7 +3909,57 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 59.69) (xy 195.58 59.69)
+			(xy 96.52 100.33) (xy 69.85 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42dcf464-f0b5-426a-91be-3538b03c5ac1")
+	)
+	(wire
+		(pts
+			(xy 125.73 78.74) (xy 110.49 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "434a7c22-2486-48e3-b964-58dc23d7c8ab")
+	)
+	(wire
+		(pts
+			(xy 64.77 116.84) (xy 80.01 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43b2e6b5-3ed0-4bea-a174-7fd3e209a1e2")
+	)
+	(wire
+		(pts
+			(xy 64.77 120.65) (xy 69.85 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4506fb5b-4bf0-43d1-acdd-006d11cda649")
+	)
+	(wire
+		(pts
+			(xy 86.36 128.27) (xy 80.01 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45f47e6e-c2ca-454c-90f7-cfb8caa7f53e")
+	)
+	(wire
+		(pts
+			(xy 215.9 66.04) (xy 227.33 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2430,17 +3969,17 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 64.77) (xy 83.82 64.77)
+			(xy 86.36 71.12) (xy 93.98 71.12)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type dash)
 		)
 		(uuid "4663ff3a-4f86-4959-abd9-a667e16ba459")
 	)
 	(wire
 		(pts
-			(xy 99.06 54.61) (xy 92.71 54.61)
+			(xy 104.14 67.31) (xy 125.73 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2450,7 +3989,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 41.91) (xy 154.94 49.53)
+			(xy 187.96 48.26) (xy 187.96 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2460,17 +3999,37 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 67.31) (xy 81.28 67.31)
+			(xy 86.36 73.66) (xy 91.44 73.66)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type dash)
 		)
 		(uuid "49f87066-4d18-4f02-baf1-a2ab0432db47")
 	)
 	(wire
 		(pts
-			(xy 184.15 64.77) (xy 184.15 71.12)
+			(xy 96.52 85.09) (xy 69.85 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ca27bb5-40cd-4a6f-a777-8e80241b01bc")
+	)
+	(wire
+		(pts
+			(xy 173.99 71.12) (xy 173.99 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d56be4e-85e8-4f1f-92b4-10c19c7374b1")
+	)
+	(wire
+		(pts
+			(xy 215.9 71.12) (xy 215.9 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2480,7 +4039,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 45.72) (xy 81.28 45.72)
+			(xy 104.14 52.07) (xy 95.25 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2490,7 +4049,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 41.91) (xy 161.29 41.91)
+			(xy 189.23 48.26) (xy 191.77 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2500,17 +4059,57 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 57.15) (xy 149.86 57.15)
+			(xy 173.99 67.31) (xy 173.99 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5d5f9d55-900a-4c00-b635-eb600bd25ba0")
+		(uuid "55f3eefb-84fb-467e-ba58-407b6dbbaa05")
 	)
 	(wire
 		(pts
-			(xy 184.15 71.12) (xy 195.58 71.12)
+			(xy 110.49 78.74) (xy 110.49 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c02e657-bf3e-4c46-8f86-512d4a0f36d9")
+	)
+	(wire
+		(pts
+			(xy 193.04 83.82) (xy 186.69 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d60b2e1-fd15-4355-9725-810cdaa59b18")
+	)
+	(wire
+		(pts
+			(xy 69.85 100.33) (xy 69.85 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60659eb5-3434-41ab-9c54-3c75162cadb5")
+	)
+	(wire
+		(pts
+			(xy 86.36 127) (xy 86.36 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62269ea9-3c9b-4f01-9c66-4a0a18b61cbc")
+	)
+	(wire
+		(pts
+			(xy 215.9 77.47) (xy 227.33 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2520,7 +4119,17 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 49.53) (xy 154.94 49.53)
+			(xy 85.09 93.98) (xy 96.52 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67757a00-c857-4031-a835-a40a85152512")
+	)
+	(wire
+		(pts
+			(xy 163.83 55.88) (xy 187.96 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2530,27 +4139,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 53.34) (xy 152.4 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69dbcceb-10ba-4bc7-9a57-5da0d57ac911")
-	)
-	(wire
-		(pts
-			(xy 158.75 45.72) (xy 161.29 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6aa3851f-2964-4b46-823a-437f2ef6a35b")
-	)
-	(wire
-		(pts
-			(xy 81.28 67.31) (xy 81.28 50.8)
+			(xy 91.44 73.66) (xy 91.44 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2560,7 +4149,47 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 48.26) (xy 83.82 54.61)
+			(xy 64.77 148.59) (xy 69.85 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cb86de7-ce64-44e6-a83a-c83f4eef7da2")
+	)
+	(wire
+		(pts
+			(xy 191.77 95.25) (xy 198.12 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d72e621-df4f-4da5-990e-bf53244d1bd5")
+	)
+	(wire
+		(pts
+			(xy 80.01 125.73) (xy 80.01 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "701b8aec-df6f-4f3f-a0c9-95ca392c1a7a")
+	)
+	(wire
+		(pts
+			(xy 125.73 90.17) (xy 118.11 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72ed3547-c4fc-48a9-857f-c007ff371834")
+	)
+	(wire
+		(pts
+			(xy 93.98 54.61) (xy 93.98 67.31)
 		)
 		(stroke
 			(width 0)
@@ -2570,27 +4199,77 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 62.23) (xy 78.74 62.23)
+			(xy 86.36 68.58) (xy 88.9 68.58)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type dash)
 		)
 		(uuid "7463f41b-1153-4f5e-bd02-3a778091397f")
 	)
 	(wire
 		(pts
-			(xy 152.4 63.5) (xy 162.56 63.5)
+			(xy 69.85 93.98) (xy 73.66 93.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "75b353dc-da7b-4436-a1e1-79238d8ca03e")
+		(uuid "77d41e59-4b12-413c-aa70-c141ed4445f2")
 	)
 	(wire
 		(pts
-			(xy 154.94 41.91) (xy 158.75 41.91)
+			(xy 69.85 109.22) (xy 69.85 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77e2f7be-f24d-45c7-8ab7-0b10c8c33aec")
+	)
+	(wire
+		(pts
+			(xy 180.34 52.07) (xy 190.5 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a89cf38-c30e-40f5-9164-70b23796ad28")
+	)
+	(wire
+		(pts
+			(xy 101.6 41.91) (xy 114.3 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ad54fde-9330-44a0-aecf-35a471a0b563")
+	)
+	(wire
+		(pts
+			(xy 168.91 74.93) (xy 160.02 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cd869f9-a78e-48da-8523-04a6485c779a")
+	)
+	(wire
+		(pts
+			(xy 187.96 60.96) (xy 187.96 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e0f966a-74d3-4b30-adf8-4b934c3f9009")
+	)
+	(wire
+		(pts
+			(xy 187.96 48.26) (xy 189.23 48.26)
 		)
 		(stroke
 			(width 0)
@@ -2600,17 +4279,57 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 53.34) (xy 99.06 54.61)
+			(xy 115.57 55.88) (xy 125.73 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8a10eca7-a350-49c4-b921-97249758927e")
+		(uuid "7f1969b5-27f4-424b-82ae-23369a383498")
 	)
 	(wire
 		(pts
-			(xy 99.06 45.72) (xy 92.71 45.72)
+			(xy 86.36 133.35) (xy 86.36 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "800587a2-f4c8-4871-aa7d-f4789a467f8c")
+	)
+	(wire
+		(pts
+			(xy 195.58 92.71) (xy 198.12 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "825011a7-6586-4bf5-8432-08f3d4a3a8c5")
+	)
+	(wire
+		(pts
+			(xy 104.14 54.61) (xy 104.14 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86515e61-4316-48fd-b08f-2058046b6445")
+	)
+	(wire
+		(pts
+			(xy 64.77 144.78) (xy 80.01 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bd8d8d4-8ad2-4117-b240-cc0c5a3f67cf")
+	)
+	(wire
+		(pts
+			(xy 123.19 52.07) (xy 104.14 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2620,7 +4339,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 52.07) (xy 195.58 52.07)
+			(xy 223.52 58.42) (xy 226.06 58.42)
 		)
 		(stroke
 			(width 0)
@@ -2630,7 +4349,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 45.72) (xy 78.74 43.18)
+			(xy 88.9 52.07) (xy 88.9 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2640,7 +4359,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 41.91) (xy 148.59 45.72)
+			(xy 172.72 48.26) (xy 172.72 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2650,7 +4369,37 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 49.53) (xy 139.7 49.53)
+			(xy 80.01 144.78) (xy 86.36 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98dea4d7-339e-4be1-bcde-89e95cad716a")
+	)
+	(wire
+		(pts
+			(xy 118.11 90.17) (xy 118.11 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c686f40-49f0-4d82-8cd1-fc5aa426cdea")
+	)
+	(wire
+		(pts
+			(xy 80.01 128.27) (xy 69.85 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ce96e2d-f4bd-45e6-9625-d5d26594cdf5")
+	)
+	(wire
+		(pts
+			(xy 160.02 55.88) (xy 163.83 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2660,7 +4409,37 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 35.56) (xy 99.06 45.72)
+			(xy 125.73 86.36) (xy 115.57 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a05da159-7a59-4f5c-94e7-c9a006053ba3")
+	)
+	(wire
+		(pts
+			(xy 88.9 49.53) (xy 101.6 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a369461a-50fc-486d-bf57-40ee908ffddd")
+	)
+	(wire
+		(pts
+			(xy 171.45 73.66) (xy 190.5 73.66)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "a5c1a26a-24ec-4432-bf53-32330bf7f421")
+	)
+	(wire
+		(pts
+			(xy 123.19 41.91) (xy 123.19 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2670,7 +4449,17 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 48.26) (xy 83.82 48.26)
+			(xy 190.5 52.07) (xy 191.77 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a985cfef-cd73-46d6-956a-31cf73e52b0f")
+	)
+	(wire
+		(pts
+			(xy 86.36 54.61) (xy 93.98 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2680,7 +4469,17 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 43.18) (xy 96.52 49.53)
+			(xy 173.99 71.12) (xy 194.31 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac575254-bdd2-42ef-bf0e-aaa3ad9f42cf")
+	)
+	(wire
+		(pts
+			(xy 110.49 49.53) (xy 110.49 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2690,17 +4489,47 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 53.34) (xy 152.4 63.5)
+			(xy 86.36 142.24) (xy 86.36 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b1ffe54d-504c-4a9a-bf99-3eee36da3472")
+		(uuid "b172409a-d187-4775-b3bb-34ce42f850e3")
 	)
 	(wire
 		(pts
-			(xy 81.28 50.8) (xy 76.2 50.8)
+			(xy 86.36 116.84) (xy 115.57 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2154e51-4925-4743-80ea-7a139bda1039")
+	)
+	(wire
+		(pts
+			(xy 69.85 148.59) (xy 69.85 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b48b852a-91fc-4409-9909-0e5a543831d6")
+	)
+	(wire
+		(pts
+			(xy 160.02 67.31) (xy 173.99 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4937288-08b5-45a0-acd9-023f3147ed25")
+	)
+	(wire
+		(pts
+			(xy 91.44 57.15) (xy 86.36 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2710,17 +4539,77 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 43.18) (xy 90.17 43.18)
+			(xy 193.04 63.5) (xy 193.04 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bd42808f-15e4-4aa0-8207-43d393695015")
+		(uuid "b8a0a3fb-32a3-412c-9839-d55fda93e6bb")
 	)
 	(wire
 		(pts
-			(xy 191.77 55.88) (xy 195.58 55.88)
+			(xy 86.36 132.08) (xy 80.01 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9263353-27ac-4f56-8d29-f8cbf4e9ad95")
+	)
+	(wire
+		(pts
+			(xy 171.45 71.12) (xy 171.45 73.66)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "bd983500-26df-4fff-ac92-0e124aaf5a72")
+	)
+	(wire
+		(pts
+			(xy 107.95 63.5) (xy 107.95 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2460c69-1b9a-43c9-8f9c-35cd551cc96a")
+	)
+	(wire
+		(pts
+			(xy 104.14 67.31) (xy 104.14 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c36a380c-16a9-40c0-a624-94369477ba2f")
+	)
+	(wire
+		(pts
+			(xy 173.99 83.82) (xy 175.26 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3c7a236-2c3f-48b0-a9f4-a0512c16fc3e")
+	)
+	(wire
+		(pts
+			(xy 187.96 55.88) (xy 187.96 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3cfe642-570c-4cf0-86a6-9cf91d157ced")
+	)
+	(wire
+		(pts
+			(xy 223.52 62.23) (xy 227.33 62.23)
 		)
 		(stroke
 			(width 0)
@@ -2730,47 +4619,107 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 60.96) (xy 146.05 80.01)
+			(xy 125.73 63.5) (xy 107.95 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c5cc96f8-0c69-4ef0-989e-ae5fa63b48d3")
+		(uuid "ce85a1b5-cdd8-497c-909b-b861d4e55d56")
 	)
 	(wire
 		(pts
-			(xy 160.02 80.01) (xy 157.48 80.01)
+			(xy 69.85 128.27) (xy 69.85 120.65)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "caad48e1-7ed7-4a8d-94ad-37939843abe1")
+		(uuid "d262fcb0-72a4-4a1f-804d-2b865b9647a6")
 	)
 	(wire
 		(pts
-			(xy 83.82 64.77) (xy 83.82 54.61)
+			(xy 93.98 71.12) (xy 93.98 67.31)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type dash)
 		)
 		(uuid "d3ca49d2-9607-40e5-b8b0-5ba35a4c35fd")
 	)
 	(wire
 		(pts
-			(xy 78.74 62.23) (xy 78.74 45.72)
+			(xy 88.9 68.58) (xy 88.9 52.07)
 		)
 		(stroke
 			(width 0)
-			(type default)
+			(type dash)
 		)
 		(uuid "d46306e1-08d6-4c7f-b8e4-fe54ba2e6b04")
 	)
 	(wire
 		(pts
-			(xy 135.89 45.72) (xy 148.59 45.72)
+			(xy 160.02 71.12) (xy 171.45 71.12)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(uuid "d6b324c7-b314-4365-88a2-59b6723c9a41")
+	)
+	(wire
+		(pts
+			(xy 191.77 90.17) (xy 191.77 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d73a079c-e41d-48be-94ad-45a42d385679")
+	)
+	(wire
+		(pts
+			(xy 115.57 86.36) (xy 115.57 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d73e3703-c43a-4b68-9cd7-42531c012c34")
+	)
+	(wire
+		(pts
+			(xy 107.95 77.47) (xy 106.68 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7a7acba-c49a-4d5f-bb17-236c9baa1a16")
+	)
+	(wire
+		(pts
+			(xy 113.03 109.22) (xy 96.52 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dac06d78-7440-47f4-b7cf-d6687bfd2958")
+	)
+	(wire
+		(pts
+			(xy 168.91 90.17) (xy 168.91 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db4a20ba-d447-4211-8aec-274727563039")
+	)
+	(wire
+		(pts
+			(xy 160.02 52.07) (xy 172.72 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2780,7 +4729,37 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 55.88) (xy 158.75 55.88)
+			(xy 198.12 97.79) (xy 195.58 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd6d09f0-873a-4b35-8fba-255332c27e1a")
+	)
+	(wire
+		(pts
+			(xy 160.02 59.69) (xy 172.72 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e119fb80-fe84-4ae7-81e7-59c0bdeb00e0")
+	)
+	(wire
+		(pts
+			(xy 193.04 63.5) (xy 190.5 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2b9d0db-d418-4c64-ac18-3a79e6e57d87")
+	)
+	(wire
+		(pts
+			(xy 194.31 63.5) (xy 193.04 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2790,7 +4769,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 35.56) (xy 90.17 43.18)
+			(xy 101.6 41.91) (xy 101.6 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2800,7 +4779,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 53.34) (xy 184.15 59.69)
+			(xy 215.9 59.69) (xy 215.9 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2810,7 +4789,17 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 41.91) (xy 139.7 49.53)
+			(xy 74.93 109.22) (xy 69.85 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f74d77d4-edf2-461b-8042-bc5fb89f1327")
+	)
+	(wire
+		(pts
+			(xy 163.83 48.26) (xy 163.83 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2820,7 +4809,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 67.31) (xy 195.58 67.31)
+			(xy 223.52 73.66) (xy 227.33 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2830,17 +4819,37 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 67.31) (xy 162.56 67.31)
+			(xy 69.85 151.13) (xy 69.85 148.59)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
+		(uuid "fdadff47-2329-478b-be1f-ffa553267a5f")
+	)
+	(wire
+		(pts
+			(xy 86.36 144.78) (xy 118.11 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdececdd-cada-4e67-a954-5202df2113aa")
+	)
+	(wire
+		(pts
+			(xy 190.5 74.93) (xy 194.31 74.93)
+		)
+		(stroke
+			(width 0)
+			(type dash)
+		)
 		(uuid "ff0333f8-abb4-47d9-9599-243f25191df2")
 	)
 	(hierarchical_label "OUT1_NO"
 		(shape input)
-		(at 195.58 55.88 0)
+		(at 227.33 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2851,7 +4860,7 @@
 	)
 	(hierarchical_label "OUT2_NC"
 		(shape input)
-		(at 195.58 63.5 0)
+		(at 227.33 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2862,7 +4871,7 @@
 	)
 	(hierarchical_label "OUT1_NC"
 		(shape input)
-		(at 195.58 52.07 0)
+		(at 226.06 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2873,7 +4882,7 @@
 	)
 	(hierarchical_label "AC_L"
 		(shape input)
-		(at 195.58 45.72 0)
+		(at 226.06 52.07 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2884,7 +4893,7 @@
 	)
 	(hierarchical_label "OUT2_NO"
 		(shape input)
-		(at 195.58 67.31 0)
+		(at 227.33 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2895,7 +4904,7 @@
 	)
 	(hierarchical_label "AC_N"
 		(shape input)
-		(at 195.58 41.91 0)
+		(at 226.06 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2906,7 +4915,7 @@
 	)
 	(hierarchical_label "OUT2_COM"
 		(shape input)
-		(at 195.58 71.12 0)
+		(at 227.33 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2917,7 +4926,7 @@
 	)
 	(hierarchical_label "OUT1_COM"
 		(shape input)
-		(at 195.58 59.69 0)
+		(at 227.33 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2927,8 +4936,307 @@
 		(uuid "e55de6d5-e050-44da-bca7-73bcdd392523")
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 69.85 151.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "082cdeb6-2a25-4827-8a95-eba3833ef1dd")
+		(property "Reference" "#PWR07"
+			(at 69.85 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 69.85 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 69.85 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f2f4cc8-fc41-4563-bcaf-df321bff1df6")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:Конденсатор_Електроліт")
+		(at 86.36 133.35 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13bac08b-8114-4898-b8dc-2e38cc8f30f4")
+		(property "Reference" "C4"
+			(at 90.17 137.1959 90)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1 mk"
+			(at 90.17 140.3709 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 89.408 142.748 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 94.742 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 94.488 147.066 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 94.996 135.636 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Конденсатор ? mfF; ?V; виводний"
+			(at 92.456 136.144 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31d93811-50ea-48dc-8476-4bb2689b5113")
+		)
+		(pin "1"
+			(uuid "467a6cfa-a4bd-413d-9bce-8e83d7ebe879")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:Резистор")
+		(at 80.01 125.73 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1522374f-8dc0-417e-8980-8e522c9cbbba")
+		(property "Reference" "R2"
+			(at 73.406 119.126 90)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k2"
+			(at 73.152 123.444 90)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 73.152 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 68.834 123.698 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" ""
+			(at 80.01 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 70.612 121.158 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Резистор ?R, виводний; 0,125Вт"
+			(at 65.532 121.158 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2d8b3ee0-d457-4bea-ab19-244515ed42fb")
+		)
+		(pin "1"
+			(uuid "69e10ab3-099d-41b6-ac8c-23712a96f245")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "B_EL_General:Rele-Module_2p")
-		(at 162.56 55.88 0)
+		(at 194.31 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2936,7 +5244,7 @@
 		(dnp no)
 		(uuid "158191c1-5dce-4213-b6e3-8992185db6e9")
 		(property "Reference" "PM1"
-			(at 166.624 50.8 0)
+			(at 198.374 58.42 0)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -2947,17 +5255,16 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
-			(at 162.56 51.562 0)
+		(property "Value" "lowLevel; 5V"
+			(at 210.82 81.534 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 2.54 2.54)
 				)
-				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 69.85 0)
+			(at 194.31 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2966,7 +5273,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 69.85 0)
+			(at 194.31 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2975,7 +5282,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 168.402 39.878 0)
+			(at 200.152 47.498 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2984,7 +5291,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 167.894 43.434 0)
+			(at 199.644 51.054 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2993,7 +5300,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 157.988 36.068 0)
+			(at 189.738 43.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3002,7 +5309,7 @@
 			)
 		)
 		(property "Контактів" "10"
-			(at 162.052 36.068 0)
+			(at 193.802 43.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3011,7 +5318,7 @@
 			)
 		)
 		(property "Примітка" ""
-			(at 162.56 69.85 0)
+			(at 194.31 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3019,8 +5326,17 @@
 				(hide yes)
 			)
 		)
-		(property "Склад" "Модуль реле, DC5V, 2 канали; lowHighLevel"
-			(at 168.148 46.228 0)
+		(property "Склад" "Модуль реле, DC5V, 2 канали; lowLevel(!)"
+			(at 199.898 53.848 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "GROUP1" ""
+			(at 194.31 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3068,33 +5384,36 @@
 		)
 	)
 	(symbol
-		(lib_id "B_Electronics:T_DS18B20")
-		(at 76.2 67.31 180)
+		(lib_id "B_EL_General:Кнопка_NO")
+		(at 74.93 109.22 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "26ebc60e-401a-44d4-991c-f5dcd504065d")
-		(property "Reference" "DT2"
-			(at 68.58 55.88 0)
+		(uuid "1b9e6948-be83-4ed5-9d58-1769cd66a52a")
+		(property "Reference" "SB2"
+			(at 88.138 106.426 0)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 2.54 2.54)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
 				)
 			)
 		)
-		(property "Value" "D18B20"
-			(at 68.58 58.42 0)
+		(property "Value" "Кнопка S2PR-P1K, чорна, д22"
+			(at 82.55 99.822 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 67.31 0)
+			(at 74.93 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3103,7 +5422,112 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 67.31 0)
+			(at 74.93 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Access point"
+			(at 80.645 102.87 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "ЛП" "1"
+			(at 73.406 102.362 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 86.106 94.996 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 78.74 94.742 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" "Кнопка без фіксації"
+			(at 81.534 97.028 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "47e894dc-157a-4fbe-8714-e0c8db6814aa")
+		)
+		(pin "1"
+			(uuid "9a2fbbf7-c8bc-4408-83f4-7a7144a1a77e")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "SB2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:T_DS18B20")
+		(at 86.36 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26ebc60e-401a-44d4-991c-f5dcd504065d")
+		(property "Reference" "DT2"
+			(at 78.486 63.246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D18B20"
+			(at 78.486 65.786 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3112,7 +5536,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 67.31 0)
+			(at 86.36 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3121,7 +5545,7 @@
 			)
 		)
 		(property "ЛП" "1"
-			(at 70.358 72.644 0)
+			(at 80.518 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3148,8 +5572,495 @@
 		)
 	)
 	(symbol
+		(lib_name "БЖ_AC-DC_1")
+		(lib_id "B_Electronics:БЖ_AC-DC")
+		(at 44.45 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2cbaeadf-419b-4868-bea9-0d91169d949e")
+		(property "Reference" "PS2"
+			(at 54.61 107.95 0)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Value" "220АС→3v3DC;0.5W"
+			(at 54.61 111.76 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.864 128.27 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 65.278 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 47.752 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "4"
+			(at 55.118 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" "Блок живлення "
+			(at 52.07 104.902 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Блок живлення 220АС-24VDC-20W"
+			(at 51.562 102.616 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "689a8f92-6edf-4e6e-854f-0d9383e77cbd")
+		)
+		(pin "1"
+			(uuid "d8058cdb-dd12-4511-9022-4e1fc912ca58")
+		)
+		(pin "4"
+			(uuid "af7ef0cd-8193-4ac9-9429-b5e1c8d8444e")
+		)
+		(pin "2"
+			(uuid "c421da81-2a1b-4960-8008-d2e7d69180e4")
+		)
+		(pin "2"
+			(uuid "a11048c3-ddaf-4fbd-a5b5-633d185b4953")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "PS2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_EL_General:Кнопка_NO")
+		(at 73.66 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2fa3714f-0f9a-4863-abe7-6d31c500d28e")
+		(property "Reference" "SB1"
+			(at 87.63 91.186 0)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Value" "Кнопка S2PR-P1K, чорна, д22"
+			(at 81.28 84.582 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Manual On/Off"
+			(at 81.534 87.63 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "ЛП" "1"
+			(at 72.136 87.122 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 84.836 79.756 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 77.47 79.502 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" "Кнопка без фіксації"
+			(at 80.264 81.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d1291784-0968-4aa5-bcbb-e51414100ae8")
+		)
+		(pin "1"
+			(uuid "2a2f385e-2410-44d2-89a6-99424e90e04b")
+		)
+		(instances
+			(project ""
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "SB1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "БЖ_AC-DC_2")
+		(lib_id "B_Electronics:БЖ_AC-DC")
+		(at 44.45 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3016532d-5fd6-4a0b-9e3c-ebca2d93e17d")
+		(property "Reference" "PS3"
+			(at 54.61 135.89 0)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Value" "220АС→3v3DC;0.5W"
+			(at 54.61 139.7 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.864 156.21 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 65.278 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 47.752 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "4"
+			(at 55.118 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" "Блок живлення "
+			(at 52.07 132.842 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Блок живлення 220АС-24VDC-20W"
+			(at 51.562 130.556 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d1e780dd-2e72-4661-bcfe-af4ecb7c6b97")
+		)
+		(pin "1"
+			(uuid "97609659-36b4-4ff5-b45d-a5136da9862d")
+		)
+		(pin "4"
+			(uuid "fb4d16a4-c8b7-44dd-973b-29154cf41537")
+		)
+		(pin "2"
+			(uuid "ceb1364d-ea87-4f20-9937-6599b0dcddf5")
+		)
+		(pin "2"
+			(uuid "624579a8-b5fc-4719-8f3a-0e68900d363f")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "PS3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:Резистор")
+		(at 80.01 144.78 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "32d46e0f-671c-43df-b421-b9c4361e39a0")
+		(property "Reference" "R3"
+			(at 73.406 138.176 90)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "2k2"
+			(at 73.152 142.494 90)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 73.152 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 68.834 142.748 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" ""
+			(at 80.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 70.612 140.208 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Резистор ?R, виводний; 0,125Вт"
+			(at 65.532 140.208 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8a244c99-a72e-4bf6-8235-2ee0e93040b0")
+		)
+		(pin "1"
+			(uuid "c2051c53-7d83-401f-abc6-e4a42c9c5adc")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "B_EL_Controllers:ESP32-Wroom-32D-NodeMCU")
-		(at 135.89 99.06 180)
+		(at 160.02 105.41 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3158,7 +6069,7 @@
 		(fields_autoplaced yes)
 		(uuid "37fc62a7-3668-4fe0-8d9b-f7711e25094b")
 		(property "Reference" "A1"
-			(at 118.745 34.29 0)
+			(at 142.875 40.64 0)
 			(effects
 				(font
 					(size 2.54 2.54)
@@ -3169,7 +6080,7 @@
 			)
 		)
 		(property "Value" "ESP32-WROOM"
-			(at 118.745 39.37 0)
+			(at 142.875 45.72 0)
 			(effects
 				(font
 					(size 2.54 2.54)
@@ -3180,7 +6091,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 99.06 0)
+			(at 160.02 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3189,7 +6100,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 99.06 0)
+			(at 160.02 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3198,7 +6109,7 @@
 			)
 		)
 		(property "Description" "Плата розробки NodeMCU"
-			(at 120.396 119.634 0)
+			(at 144.526 125.984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3207,7 +6118,7 @@
 			)
 		)
 		(property "Постачальник" "China"
-			(at 130.302 116.586 0)
+			(at 154.432 122.936 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3216,7 +6127,7 @@
 			)
 		)
 		(property "ЛП" "1"
-			(at 124.46 116.586 0)
+			(at 148.59 122.936 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3225,7 +6136,7 @@
 			)
 		)
 		(property "Контактів" "30"
-			(at 114.3 116.586 0)
+			(at 138.43 122.936 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3333,8 +6244,140 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 195.58 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3c58ef7e-69a5-43b9-b3cf-7b5dcf68c7ae")
+		(property "Reference" "#PWR04"
+			(at 195.58 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 195.58 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 195.58 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195.58 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 195.58 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00082e28-13ee-4c4b-9312-8ce61620a583")
+		)
+		(instances
+			(project ""
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 115.57 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4ff9774b-3c15-459c-abc3-1344400e8233")
+		(property "Reference" "#PWR06"
+			(at 115.57 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.57 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 115.57 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "200f5cba-4e63-4bc5-9ccb-8b1f4a88d09d")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "B_EL_General:Rele-Module_2p")
-		(at 184.15 64.77 0)
+		(at 215.9 71.12 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3342,7 +6385,7 @@
 		(dnp no)
 		(uuid "52454f29-1c03-46e6-b412-39d72e805a13")
 		(property "Reference" "PM1"
-			(at 181.61 67.564 90)
+			(at 213.36 73.914 90)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -3352,8 +6395,8 @@
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 184.15 60.452 0)
+		(property "Value" "lowLevel; 5V"
+			(at 215.9 66.802 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3362,7 +6405,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 78.74 0)
+			(at 215.9 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3371,7 +6414,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 78.74 0)
+			(at 215.9 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3380,7 +6423,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 189.992 48.768 0)
+			(at 221.742 55.118 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3389,7 +6432,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 189.484 52.324 0)
+			(at 221.234 58.674 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3398,7 +6441,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 179.578 44.958 0)
+			(at 211.328 51.308 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3407,7 +6450,7 @@
 			)
 		)
 		(property "Контактів" "10"
-			(at 183.642 44.958 0)
+			(at 215.392 51.308 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3416,7 +6459,7 @@
 			)
 		)
 		(property "Примітка" ""
-			(at 184.15 78.74 0)
+			(at 215.9 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3424,8 +6467,17 @@
 				(hide yes)
 			)
 		)
-		(property "Склад" "Модуль реле, DC5V, 2 канали; lowHighLevel"
-			(at 189.738 55.118 0)
+		(property "Склад" "Модуль реле, DC5V, 2 канали; lowLevel(!)"
+			(at 221.488 61.468 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "GROUP1" ""
+			(at 215.9 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3474,16 +6526,16 @@
 	)
 	(symbol
 		(lib_id "B_Electronics:Конденсатор_Електроліт")
-		(at 139.7 41.91 0)
+		(at 96.52 100.33 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6f914424-4e7d-4384-8188-17ec989873a5")
-		(property "Reference" "C1"
-			(at 144.8159 34.29 0)
+		(uuid "58c7181a-1063-4d8b-be5b-9d01fff5f2a0")
+		(property "Reference" "C6"
+			(at 100.33 104.1759 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -3491,10 +6543,11 @@
 					(bold yes)
 					(italic yes)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "100mk;16V"
-			(at 144.8159 38.1 0)
+		(property "Value" "1 mk"
+			(at 100.33 107.3509 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3502,10 +6555,11 @@
 					(bold yes)
 					(italic yes)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 139.7 41.91 0)
+			(at 96.52 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3514,7 +6568,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 139.7 41.91 0)
+			(at 96.52 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3523,7 +6577,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.098 38.862 0)
+			(at 99.568 109.728 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -3535,7 +6589,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 149.86 33.528 0)
+			(at 104.902 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3544,7 +6598,7 @@
 			)
 		)
 		(property "Контактів" "2"
-			(at 153.416 33.782 0)
+			(at 104.648 114.046 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -3553,7 +6607,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 141.986 33.274 0)
+			(at 105.156 102.616 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3562,7 +6616,303 @@
 			)
 		)
 		(property "Склад" "Конденсатор ? mfF; ?V; виводний"
-			(at 142.494 35.814 0)
+			(at 102.616 103.124 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "3e80a38f-849d-4226-951d-d786fd18eec8")
+		)
+		(pin "1"
+			(uuid "baadb80b-1219-4bb3-aaf1-0a58d439d55a")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:T_Buzzer_Active")
+		(at 198.12 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5aec0e24-8b2f-46a3-9135-048f5735c82a")
+		(property "Reference" "BZ1"
+			(at 209.55 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Buzzer"
+			(at 209.55 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 198.12 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 198.12 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 202.946 87.376 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 199.39 81.026 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "3"
+			(at 194.056 81.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" "Звуковий сигнал"
+			(at 198.628 85.344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Модуль з динаміком активний, HighLevel"
+			(at 204.216 84.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "03f5eaf4-e715-4727-a737-01660b5247a1")
+		)
+		(pin "3"
+			(uuid "5ce287e6-b0c5-4ab7-8482-2fc29f0c3e02")
+		)
+		(pin "1"
+			(uuid "185c91bb-4c49-4b05-9b5e-c760bf0d1f3d")
+		)
+		(instances
+			(project ""
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "BZ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 95.25 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5d325a27-ed21-49a9-a09f-8552d4cdf987")
+		(property "Reference" "#PWR05"
+			(at 95.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 94.742 41.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 95.25 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d62f7b61-e121-4e25-929d-2f028862af11")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:Конденсатор_Електроліт")
+		(at 163.83 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f914424-4e7d-4384-8188-17ec989873a5")
+		(property "Reference" "C1"
+			(at 168.9459 40.64 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Value" "100mk;16V"
+			(at 168.9459 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 163.83 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 173.228 45.212 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 173.99 39.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 177.546 40.132 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 166.116 39.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Конденсатор ? mfF; ?V; виводний"
+			(at 166.624 42.164 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3587,7 +6937,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 158.75 41.91 180)
+		(at 189.23 48.26 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3596,7 +6946,7 @@
 		(fields_autoplaced yes)
 		(uuid "7bd27469-e1fe-4e44-8d5e-f580667708d9")
 		(property "Reference" "#PWR02"
-			(at 158.75 35.56 0)
+			(at 189.23 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3605,7 +6955,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 158.75 36.83 0)
+			(at 189.23 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3613,7 +6963,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 158.75 41.91 0)
+			(at 189.23 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3622,7 +6972,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 158.75 41.91 0)
+			(at 189.23 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3631,7 +6981,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 158.75 41.91 0)
+			(at 189.23 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3653,7 +7003,7 @@
 	)
 	(symbol
 		(lib_id "B_EL_General:Rele-Module_2p")
-		(at 184.15 53.34 0)
+		(at 215.9 59.69 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3661,7 +7011,7 @@
 		(dnp no)
 		(uuid "7d5bfb59-08b3-4b90-a72b-e58e533282bd")
 		(property "Reference" "PM1"
-			(at 181.61 56.642 90)
+			(at 213.36 62.992 90)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -3671,8 +7021,8 @@
 				)
 			)
 		)
-		(property "Value" "~"
-			(at 184.15 49.022 0)
+		(property "Value" "lowLevel; 5V"
+			(at 215.9 55.372 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3681,7 +7031,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 67.31 0)
+			(at 215.9 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3690,7 +7040,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 67.31 0)
+			(at 215.9 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3699,7 +7049,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 189.992 37.338 0)
+			(at 221.742 43.688 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3708,7 +7058,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 189.484 40.894 0)
+			(at 221.234 47.244 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3717,7 +7067,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 179.578 33.528 0)
+			(at 211.328 39.878 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3726,7 +7076,7 @@
 			)
 		)
 		(property "Контактів" "10"
-			(at 183.642 33.528 0)
+			(at 215.392 39.878 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3735,7 +7085,7 @@
 			)
 		)
 		(property "Примітка" ""
-			(at 184.15 67.31 0)
+			(at 215.9 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3743,8 +7093,17 @@
 				(hide yes)
 			)
 		)
-		(property "Склад" "Модуль реле, DC5V, 2 канали; lowHighLevel"
-			(at 189.738 43.688 0)
+		(property "Склад" "Модуль реле, DC5V, 2 канали; lowLevel(!)"
+			(at 221.488 50.038 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "GROUP1" ""
+			(at 215.9 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3793,16 +7152,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 160.02 80.01 0)
+		(at 195.58 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a8ef63e1-10ab-40b1-b9b9-09af5f30432c")
+		(uuid "80538a13-f483-437c-8c66-326d12583289")
 		(property "Reference" "#PWR01"
-			(at 160.02 86.36 0)
+			(at 195.58 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3811,7 +7170,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 160.02 85.09 0)
+			(at 195.58 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3819,7 +7178,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 80.01 0)
+			(at 195.58 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3828,7 +7187,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 80.01 0)
+			(at 195.58 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3837,7 +7196,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 160.02 80.01 0)
+			(at 195.58 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3846,10 +7205,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "32ddd6dc-1d82-4b4e-ae76-2962a206ff65")
+			(uuid "c450e79f-37b7-4ae4-9bf6-fbc63b8a90b6")
 		)
 		(instances
-			(project ""
+			(project "gridController"
 				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
 					(reference "#PWR01")
 					(unit 1)
@@ -3858,33 +7217,41 @@
 		)
 	)
 	(symbol
-		(lib_id "B_Electronics:T_DS18B20")
-		(at 76.2 50.8 180)
+		(lib_id "B_Electronics:Конденсатор_Електроліт")
+		(at 96.52 85.09 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b6446cb3-adf0-42fb-a7f6-707143f40b3a")
-		(property "Reference" "DT1"
-			(at 68.58 39.37 0)
+		(uuid "8d2d8a3e-e804-44e7-85d3-c15f8c18d30b")
+		(property "Reference" "C5"
+			(at 100.33 88.9359 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 1.778 1.778)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "D18B20"
-			(at 68.58 41.91 0)
+		(property "Value" "1 mk"
+			(at 100.33 92.1109 90)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+					(italic yes)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 50.8 0)
+			(at 96.52 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3893,7 +7260,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 50.8 0)
+			(at 96.52 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3902,7 +7269,355 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 50.8 0)
+			(at 99.568 94.488 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 104.902 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 104.648 98.806 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 105.156 87.376 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Конденсатор ? mfF; ?V; виводний"
+			(at 102.616 87.884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "90f94b2c-3b27-4d2e-94fd-a927f925c0b9")
+		)
+		(pin "1"
+			(uuid "82a673ab-c6f2-4a23-81ba-f54df3c955aa")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:LED")
+		(at 106.68 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a56cf967-c9b6-45c0-9e10-fa40d876ae15")
+		(property "Reference" "LED2"
+			(at 100.33 70.358 0)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Value" "WiFi, жовт"
+			(at 100.33 73.406 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 104.902 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 103.632 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 108.712 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" ""
+			(at 106.68 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Світлодіод, 3мм, Зелений"
+			(at 104.14 96.774 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "GROUP1" ""
+			(at 106.68 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22f26bab-fddb-497a-b0af-fa6be8f5d70c")
+		)
+		(pin "2"
+			(uuid "5cf6a07e-1c32-4d67-b00a-b40278967a33")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "LED2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:Конденсатор_Електроліт")
+		(at 86.36 127 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a615fd83-c2f4-48df-b24b-4df909145a4f")
+		(property "Reference" "C3"
+			(at 90.17 120.614 90)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1 mk"
+			(at 90.17 123.789 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.254)
+					(bold yes)
+					(italic yes)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 83.312 117.602 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+					(thickness 0.381)
+					(bold yes)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 77.978 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 78.232 113.284 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 77.724 124.714 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Конденсатор ? mfF; ?V; виводний"
+			(at 80.264 124.206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6a30dc5a-1256-4447-add5-d9440b2895c5")
+		)
+		(pin "1"
+			(uuid "4be4bebf-4206-45f9-b6e6-f785feb71efe")
+		)
+		(instances
+			(project ""
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "B_Electronics:T_DS18B20")
+		(at 86.36 57.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b6446cb3-adf0-42fb-a7f6-707143f40b3a")
+		(property "Reference" "DT1"
+			(at 78.74 46.736 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D18B20"
+			(at 78.74 49.276 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3911,7 +7626,7 @@
 			)
 		)
 		(property "ЛП" "1"
-			(at 70.358 56.134 0)
+			(at 80.518 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3939,7 +7654,7 @@
 	)
 	(symbol
 		(lib_id "B_Electronics:БЖ_AC-DC")
-		(at 181.61 45.72 180)
+		(at 212.09 52.07 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3948,7 +7663,7 @@
 		(fields_autoplaced yes)
 		(uuid "c0c533c4-6927-49c3-9349-89e5ccba09d5")
 		(property "Reference" "PS1"
-			(at 171.45 29.21 0)
+			(at 201.93 35.56 0)
 			(effects
 				(font
 					(size 2.54 2.54)
@@ -3959,7 +7674,7 @@
 			)
 		)
 		(property "Value" "220АС→5..12VDC;0.5A"
-			(at 171.45 33.02 0)
+			(at 201.93 39.37 0)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -3970,7 +7685,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 45.72 0)
+			(at 212.09 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3979,7 +7694,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 45.72 0)
+			(at 212.09 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3988,7 +7703,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 171.196 34.29 0)
+			(at 201.676 40.64 0)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -3998,7 +7713,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 160.782 54.61 0)
+			(at 191.262 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4007,7 +7722,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 178.308 54.61 0)
+			(at 208.788 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4016,7 +7731,7 @@
 			)
 		)
 		(property "Контактів" "4"
-			(at 170.942 54.61 0)
+			(at 201.422 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4025,7 +7740,7 @@
 			)
 		)
 		(property "Примітка" "Блок живлення "
-			(at 173.99 57.658 0)
+			(at 204.47 64.008 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4034,7 +7749,7 @@
 			)
 		)
 		(property "Склад" "Блок живлення 220АС-24VDC-20W"
-			(at 174.498 59.944 0)
+			(at 204.978 66.294 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4068,7 +7783,7 @@
 	)
 	(symbol
 		(lib_id "B_Electronics:Резистор")
-		(at 92.71 54.61 90)
+		(at 104.14 63.5 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4076,7 +7791,7 @@
 		(dnp no)
 		(uuid "c5e0afcb-eca6-47b4-aba6-1f1be36c8f92")
 		(property "Reference" "R1"
-			(at 86.106 48.006 90)
+			(at 97.536 56.896 90)
 			(effects
 				(font
 					(size 2.54 2.54)
@@ -4088,7 +7803,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 85.852 52.324 90)
+			(at 97.282 61.214 90)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -4098,7 +7813,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 92.71 54.61 0)
+			(at 104.14 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4107,7 +7822,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 54.61 0)
+			(at 104.14 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4116,7 +7831,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 92.71 54.61 0)
+			(at 104.14 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4125,7 +7840,7 @@
 			)
 		)
 		(property "Контактів" "2"
-			(at 85.852 53.34 0)
+			(at 97.282 62.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4134,7 +7849,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 81.534 52.578 0)
+			(at 92.964 61.468 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4143,7 +7858,7 @@
 			)
 		)
 		(property "Примітка" ""
-			(at 92.71 54.61 0)
+			(at 104.14 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4152,7 +7867,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 83.312 50.038 0)
+			(at 94.742 58.928 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4161,7 +7876,7 @@
 			)
 		)
 		(property "Склад" "Резистор ?R, виводний; 0,125Вт"
-			(at 78.232 50.038 0)
+			(at 89.662 58.928 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4186,7 +7901,7 @@
 	)
 	(symbol
 		(lib_id "B_Electronics:LED")
-		(at 146.05 80.01 0)
+		(at 175.26 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4194,7 +7909,7 @@
 		(dnp no)
 		(uuid "e0e8b56e-30bc-41c5-8a32-4769306dae24")
 		(property "Reference" "LED1"
-			(at 151.892 73.406 0)
+			(at 180.34 67.818 0)
 			(effects
 				(font
 					(size 2.54 2.54)
@@ -4204,8 +7919,8 @@
 				)
 			)
 		)
-		(property "Value" "Мережа"
-			(at 150.368 84.836 0)
+		(property "Value" "Мережа, син"
+			(at 178.054 64.516 0)
 			(effects
 				(font
 					(size 1.905 1.905)
@@ -4216,7 +7931,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 80.01 0)
+			(at 175.26 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4225,7 +7940,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 80.01 0)
+			(at 175.26 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4234,7 +7949,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 146.05 80.01 0)
+			(at 175.26 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4243,7 +7958,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 147.828 63.5 0)
+			(at 177.038 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4252,7 +7967,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 149.098 65.786 0)
+			(at 178.308 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4261,7 +7976,7 @@
 			)
 		)
 		(property "Контактів" "2"
-			(at 144.018 65.786 0)
+			(at 173.228 46.736 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4270,7 +7985,7 @@
 			)
 		)
 		(property "Примітка" ""
-			(at 146.05 80.01 0)
+			(at 175.26 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4279,7 +7994,7 @@
 			)
 		)
 		(property "Склад" "Світлодіод, 3мм, Зелений"
-			(at 148.59 60.706 0)
+			(at 177.8 41.656 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4288,7 +8003,7 @@
 			)
 		)
 		(property "GROUP1" ""
-			(at 146.05 80.01 0)
+			(at 175.26 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4312,8 +8027,135 @@
 		)
 	)
 	(symbol
+		(lib_id "B_Electronics:LED")
+		(at 186.69 83.82 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2948e0e-ac58-4d6f-81e3-2d58bfd4de7e")
+		(property "Reference" "LED3"
+			(at 182.372 76.2 0)
+			(effects
+				(font
+					(size 2.54 2.54)
+					(thickness 0.508)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Value" "OUT1, зел"
+			(at 182.88 79.502 0)
+			(effects
+				(font
+					(size 1.905 1.905)
+					(thickness 0.254)
+					(bold yes)
+					(italic yes)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Постачальник" "Придбати"
+			(at 184.912 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ЛП" "0"
+			(at 183.642 98.044 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Контактів" "2"
+			(at 188.722 98.044 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Примітка" ""
+			(at 186.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Склад" "Світлодіод, 3мм, Зелений"
+			(at 184.15 103.124 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "GROUP1" ""
+			(at 186.69 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "76aa4b70-a65a-437b-9e82-5f74c50f774e")
+		)
+		(pin "2"
+			(uuid "42953417-6ea3-490d-acbf-297255585b4d")
+		)
+		(instances
+			(project "gridController"
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "LED3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "B_Electronics:Конденсатор_Електроліт")
-		(at 90.17 35.56 0)
+		(at 114.3 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4322,7 +8164,7 @@
 		(fields_autoplaced yes)
 		(uuid "eae396fe-f1b7-4ed8-8a1d-d4971464ce65")
 		(property "Reference" "C2"
-			(at 95.2859 27.94 0)
+			(at 119.4159 34.29 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -4333,7 +8175,7 @@
 			)
 		)
 		(property "Value" "100mk; 16V"
-			(at 95.2859 31.75 0)
+			(at 119.4159 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4344,7 +8186,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 35.56 0)
+			(at 114.3 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4353,7 +8195,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 35.56 0)
+			(at 114.3 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4362,7 +8204,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 99.568 32.512 0)
+			(at 123.698 38.862 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -4374,7 +8216,7 @@
 			)
 		)
 		(property "ЛП" "0"
-			(at 100.33 27.178 0)
+			(at 124.46 33.528 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4383,7 +8225,7 @@
 			)
 		)
 		(property "Контактів" "2"
-			(at 103.886 27.432 0)
+			(at 128.016 33.782 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -4392,7 +8234,7 @@
 			)
 		)
 		(property "Постачальник" "Придбати"
-			(at 92.456 26.924 0)
+			(at 116.586 33.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4401,7 +8243,7 @@
 			)
 		)
 		(property "Склад" "Конденсатор ? mfF; ?V; виводний"
-			(at 92.964 29.464 0)
+			(at 117.094 35.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4419,6 +8261,72 @@
 			(project "gridController"
 				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 180.34 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ebe15bae-9878-47fa-aaa9-55981e302937")
+		(property "Reference" "#PWR03"
+			(at 180.34 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 180.34 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 180.34 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81c6bfb3-b2cb-49c4-acb5-b2f4c3a3a780")
+		)
+		(instances
+			(project ""
+				(path "/956cb8e2-18f9-4ae7-ad78-6c1e3d8db9b2"
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)

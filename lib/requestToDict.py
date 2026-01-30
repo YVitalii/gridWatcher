@@ -2,7 +2,7 @@ import ujson
 
 def parseRequest(req):
     ln="lib/requestToDict.py::parseRequest()::"
-    trace=1
+    trace=0
     if trace: print(f"{ln}DEBUG: req=[ '{req}' ]")
     try:
         firstHeader=req.split('\n')[0]
@@ -13,6 +13,14 @@ def parseRequest(req):
         elif firstHeader.startswith('POST'):
             if trace: print(f"{ln}DEBUG: Detected POST request.")
             return parsePostRequest(req)
+        elif firstHeader.startswith('OPTIONS'):
+            if trace: print(f"{ln}DEBUG: Detected OPTIONS request.")
+            return {
+                'method': 'OPTIONS',
+                'path': firstHeader.split(' ')[1],
+                'data': {},
+                'error': None
+            }
     except Exception as e:
         if trace: print(f"{ln}ERROR: Exception occurred: {str(e)}")
         return {
@@ -74,7 +82,7 @@ def parseGetRequest(req_line):
 
 def parsePostRequest(req):
     ln="lib/requestToDict.py::parsePostRequest()::"
-    trace=1
+    trace=0
     if trace: print(f"{ ln}DEBUG: req=[ '{req}' ]")
     res = {
         'method': 'POST',

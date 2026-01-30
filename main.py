@@ -26,6 +26,10 @@ UDP_REQ = "Hey GridWatcher!" #b"Hey GridWatcher!"
 UDP_PORT=5005
 STATE_TIMER=10 # ceк, Період між опитуваннями стану сервера
 HTTP_PORT=3055
+#  для врахування типу реле low/high 
+HEATER_ON=const(0)
+HEATER_OFF=const(1)
+
 ln="[main.py]:"
 
 # --- всі параметри стану зведені в цей словник --------
@@ -36,9 +40,12 @@ state ={
     "time":None,
     "weekDay":None,
     "date":None,
-    "heater":None,
-    "heater":None,
-    "taskT":{"min":6, "middle":15, "max":20},
+    "heater":0,
+    "taskT":{
+        "min":6, 
+        "mid":15, 
+        "max":20
+        },
     "taskMode":None,
     "masterServer":None,
     "httpServer":None,
@@ -63,7 +70,7 @@ async def aStop(msg="."):
         print (msg)
 
 # from requestToDict import parseRequest 
-# dict=parseRequest("GET /set?taskT={min:10,middle:20,max:30}&taskTmax=30&taskTmid=20 HTTP/1.1")
+# dict=parseRequest("GET /set?taskT={min:10,mid:20,max:30}&taskTmax=30&taskTmid=20 HTTP/1.1")
 # print(dict)
 # stop()
 
@@ -88,7 +95,7 @@ realTimer=RealTime()
 #  ------------- OUTs ------------
 
 heater = Pin(12, Pin.OUT, drive=Pin.DRIVE_1) # 10mA R=60 Ohm
-heater.value(0)
+heater.value(HEATER_OFF)
 
 # while True:
 #     heater.value( not heater.value())
@@ -139,38 +146,46 @@ from WiFi.WiFiConnection import WiFiConnection
 # wifi_led = BlinkLED(2, "WiFi")
 connection = WiFiConnection(networks,BlinkLED(2, "WiFi"),True)
 
+from setState import setState
 
 # ----- http router ---------
-def mainRouter(request):
+def mainRouter(req):
     trace=True
+    body=None
     if trace:
         print(ln+"MainRouter: req=")
-        print(request)
+        print(req)
     # Проста маршрутизація
-    if "GET /status" in request:
-        body = ujson.dumps(state)
-        content_type = "application/json"
-    
-    elif "GET /start" in request:
-        body = '{"command": "start", "result": "success"}'
-        content_type = "application/json"
-
-    elif "POST /set" in request:
-        body = '{"command": "start", "result": "success"}'
+    if req['method']=='OPTIONS':
+        # Відповідь на preflight запит CORS
+        return (
+            "HTTP/1.1 200 OK\r\n"
+            "Access-Control-Allow-Origin: *\r\n" # Дозволяємо доступ з будь-якого джерела
+            "Access-Control-Allow-Methods: POST, GET, OPTIONS\r\n"
+            "Access-Control-Allow-Headers: Content-Type\r\n"
+            "Connection: close\r\n\r\n")
+    if req['method']=='GET':
+        if req['path']=='/status':
+            body = ujson.dumps(state)
+            content_type = "application/json"
+    if req['method']=='POST':
+        body=setState(req["data"],state)
+        body= ujson.dumps(body)
         content_type = "application/json" 
-    else:
-        body = "<h1>MicroPython Server</h1><p>Use /status or /start</p>"
+    if body is None:
+        body = "<h1>MicroPython Grid watcher. </h1> <p> Use GET /status or POST /set </p>"
         content_type = "text/html"
-
     return (
         "HTTP/1.1 200 OK\r\n"
         f"Content-Type: {content_type}\r\n"
+        "Access-Control-Allow-Origin: *\r\n" # Дозволяємо доступ з будь-якого джерела
         "Connection: close\r\n\r\n"
-        + body
+        + str(body)
     ) 
 
 # ---- збиральник сміття
 import gcCollector
+asyncio.create_task(gcCollector.start(trace=False))
 
 # ---- графік роботи ---
 # from Manager import Manager
@@ -184,10 +199,7 @@ async def main():
 
         # запуск WiFi
         connectionTask=asyncio.create_task(connection.start(trace=False))
-        
-        # ----- start Garbage Collector --------
-        asyncio.create_task(gcCollector.start(trace=False))
-        
+              
         # ----- start temperature reader -------
         temperatureTask= asyncio.create_task(temperatureSensor.start())
        
@@ -198,9 +210,8 @@ async def main():
         # --- стартові налаштування  http серверу
         http=None
                 
-        #  ------------ вмикаємо акумулятор тепла, якщо далі не буде якась помилка -----------
-        heater.value(0)
-        state["heater"] = 0
+        #  ------------ вмикаємо акумулятор тепла, якщо далі буде якась помилка -----------
+    
 
         # ----------  головний цикл ----------------
         while True:
@@ -220,7 +231,7 @@ async def main():
                 # -------------- http server ------------
                 if http is None:
                     # Запускаємо власний http сервер
-                    http = HTTPServer(port=HTTP_PORT,trace=True) 
+                    http = HTTPServer(port=HTTP_PORT,trace=False) 
                     http.router = mainRouter #роутер
                     asyncio.create_task(http.start())
                     state["httpServer"] = f"{connection.ip}:{HTTP_PORT}"
@@ -255,7 +266,7 @@ async def main():
                             state["heater"] = 0 if (state["offGrid"] is None or state["offGrid"]==1) else 1
                             # Запалюємо/гасимо світлодіод 
                             # blink.pin.value(state["offGrid"])
-                            heater.value(state["heater"])
+                           
 
                         except Exception as e:
                             print(ln+f"Непередбачена помилка: {e}") 
@@ -272,12 +283,11 @@ async def main():
             if (not t0 is None):
                 if t0 <= state["taskT"]["min"]:
                     state["heater"] = 1
-                    heater.value(1)
                     print(ln+f'[main.py]: heater ON, T0={t0} <= {state["taskT"]["min"]}=taskTmin')
                 elif t0 >= state["taskT"]["max"]:
                     state["heater"] = 0
-                    heater.value(0)
                     print(ln+f'[main.py]: heater OFF, T0={t0} >= {state["taskT"]["max"]}=taskTmax')
+            heater.value(HEATER_ON if state["heater"] else HEATER_OFF)
             if DEVELOPMENT:
                 ramInfo.getInfo()
             # print(state)      
